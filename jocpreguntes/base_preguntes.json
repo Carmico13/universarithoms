@@ -1,0 +1,32 @@
+[
+    {
+        "categoria": "Problemes matemàtics",
+        "Pregunta": "Què ens està preguntant el següent problema?",
+        "respuesta": "El nombre de persones que hi ha.", 
+        "incorrecta1": "El nombre de nenes.",
+        "incorrecta2": "El nombre de nens",
+        "incorrecta3": "No ens pregunta res",
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDHXHd1cDo6v4AOt10KgPD60qcuh7gEh6myu35snykiQ&s=10",
+        "objectFit": "cover"
+    },
+    {
+        "categoria": "Problemes matemàtics",
+        "Pregunta": "Què ens està preguntant el següent problema?",
+        "respuesta": "Quants entrepans toca per persona.", 
+        "incorrecta1": "El nombre d'entrepans que tenim.",
+        "incorrecta2": "El nombre de persones que han vingut.",
+        "incorrecta3": "No ens pregunta res",
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDHXHd1cDo6v4AOt10KgPD60qcuh7gEh6myu35snykiQ&s=10",
+        "objectFit": "cover"
+    },
+    {
+        "categoria": "Problemes matemàtics",
+        "Pregunta": "Què ens està preguntant el següent problema?",
+        "respuesta": "La quantitat de diners que li han sobrat.", 
+        "incorrecta1": "La quantitat de diners que ha gastat",
+        "incorrecta2": "El nombre de persones que han vingut.",
+        "incorrecta3": "No ens pregunta res",
+        "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDHXHd1cDo6v4AOt10KgPD60qcuh7gEh6myu35snykiQ&s=10",
+        "objectFit": "cover"
+    }
+]

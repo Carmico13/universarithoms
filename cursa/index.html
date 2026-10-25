@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa Matemàtica Contrarrellotge</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            background-color: #d8c4b6;
+            color: #3e3228;
+            margin: 0;
+            padding: 20px;
+        }
+        #ui {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #3e3228;
+        }
+        #temps { color: #d63031; }
+        #punts { color: #00b894; }
+        
+        #pantalla-inicio {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f4eee0;
+            padding: 30px;
+            border-radius: 12px;
+            border: 3px solid #b59f8c;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 450px;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #b59f8c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button:hover { background-color: #9c8473; }
+        
+        canvas {
+            background-color: #fcf9f2;
+            display: block;
+            margin: 0 auto;
+            border: 4px solid #b59f8c;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ui">
+        Temps: <span id="temps">30</span>s | Punts: <span id="punts">0</span>
+    </div>
+
+    <div id="pantalla-inicio">
+        <h1>Cursa Matemàtica</h1>
+        <p>Mou-te amb les fletxes del teclat, arriba a la bola daurada i respon correctament la suma per guanyar temps!</p>
+        <p><strong>Correcte: +5 segons | Incorrecte: -3 segons</strong></p>
+        <button onclick="empezarJuego()">Iniciar la cursa!</button>
+    </div>
+
+    <canvas id="lienzoJuego" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById("lienzoJuego");
+        const ctx = canvas.getContext("2d");
+
+        const txtTiempo = document.getElementById("temps");
+        const txtPuntos = document.getElementById("punts");
+        const pantallaInicio = document.getElementById("pantalla-inicio");
+
+        let jugador = { x: 50, y: 250, velocidad: 5, tamano: 40 };
+        let meta = { x: 600, y: 300, tamano: 15 };
+        let tiempoRestante = 30;
+        let puntos = 0;
+        let juegoActivo = false;
+        let intervaloTiempo;
+        let teclas = {};
+
+        let imgCelila = new Image();
+        imgCelila.src = "celila.png";
+
+        window.addEventListener("keydown", (e) => teclas[e.key] = true);
+        window.addEventListener("keyup", (e) => teclas[e.key] = false);
+
+        function empezarJuego() {
+            pantallaInicio.style.display = "none";
+            jugador.x = 50;
+            jugador.y = 250;
+            tiempoRestante = 30;
+            puntos = 0;
+            juegoActivo = true;
+            
+            txtPuntos.innerText = puntos;
+            txtTiempo.innerText = tiempoRestante;
+            generarMeta();
+
+            clearInterval(intervaloTiempo);
+            intervaloTiempo = setInterval(() => {
+                if (juegoActivo) {
+                    tiempoRestante--;
+                    txtTiempo.innerText = tiempoRestante;
+
+                    if (tiempoRestante <= 0) {
+                        finalizarJuego();
+                    }
+                }
+            }, 1000);
+
+            bucleJuego();
+        }
+
+        function generarMeta() {
+            meta.x = Math.random() * (canvas.width - 100) + 50;
+            meta.y = Math.random() * (canvas.height - 100) + 50;
+        }
+
+        function moverJugador() {
+            if (teclas["ArrowUp"] && jugador.y > 0) jugador.y -= jugador.velocidad;
+            if (teclas["ArrowDown"] && jugador.y < canvas.height - jugador.tamano) jugador.y += jugador.velocidad;
+            if (teclas["ArrowLeft"] && jugador.x > 0) jugador.x -= jugador.velocidad;
+            if (teclas["ArrowRight"] && jugador.x < canvas.width - jugador.tamano) jugador.x += jugador.velocidad;
+        }
+
+        function ferPreguntaMatematica() {
+            let num1 = Math.floor(Math.random() * 15) + 1;
+            let num2 = Math.floor(Math.random() * 15) + 1;
+            let respuestaCorrecta = num1 + num2;
+
+            teclas = {};
+
+            let respuestaUsuario = prompt(`🔎 INVESTIGACIÓ MATEMÀTICA:\nQuant és ${num1} + ${num2}?`);
+
+            if (respuestaUsuario === null) return;
+
+            if (parseInt(respuestaUsuario) === respuestaCorrecta) {
+                puntos++;
+                tiempoRestante += 5; 
+                txtPuntos.innerText = puntos;
+                alert("¡Correcte! +5 segons d'investigació extra.");
+            } else {
+                tiempoRestante -= 3; 
+                alert(`¡Incorrecte! La resposta era ${respuestaCorrecta}. -3 segons.`);
+            }
+
+            txtTiempo.innerText = tiempoRestante;
+            generarMeta();
+        }
+
+        function verificarColision() {
+            let dx = jugador.x + jugador.tamano/2 - meta.x;
+            let dy = jugador.y + jugador.tamano/2 - meta.y;
+            let distancia = Math.sqrt(dx * dx + dy * dy);
+
+            if (distancia < jugador.tamano/2 + meta.tamano) {
+                ferPreguntaMatematica();
+            }
+        }
+
+        function finalizarJuego() {
+            juegoActivo = false;
+            clearInterval(intervaloTiempo);
+            
+            pantallaInicio.style.display = "block";
+            pantallaInicio.innerHTML = `
+                <h1>Temps Agotat!</h1>
+                <p>Has aconseguit: <strong>${puntos} punts</strong></p>
+                <button onclick="empezarJuego()">Tornar a jugar</button>
+            `;
+        }
+
+        function bucleJuego() {
+            if (!juegoActivo) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            moverJugador();
+            verificarColision();
+
+            if (imgCelila.complete && imgCelila.naturalWidth !== 0) {
+                ctx.drawImage(imgCelila, jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+            } else {
+                ctx.fillStyle = "#3742fa";
+                ctx.fillRect(jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+            }
+
+            ctx.beginPath();
+            ctx.arc(meta.x, meta.y, meta.tamano, 0, Math.PI * 2);
+            ctx.fillStyle = "#f39c12";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#d35400";
+            ctx.stroke();
+            ctx.closePath();
+
+            requestAnimationFrame(bucleJuego);
+        }
+    </script>
+</body>
+</html>

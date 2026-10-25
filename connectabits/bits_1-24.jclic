@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="bits_1-24" version="0.1.3">
+ <settings>
+  <title>Bits 1-24</title>
+  <revision description="created" date="9/18/26" />
+  <author name="Carla García Carranzo" mail="carlacarranzo@hotmail.com" />
+  <language>ca</language>
+  <descriptors area-codes="mat" level-codes="PRI" />
+  <meta_langs>ca</meta_langs>
+  <descriptions>
+   <description language="ca" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="PORTADA" />
+  <item id="start" name="RELACIONA BITS" />
+  <item name="RELACIONA BITS_4" />
+  <item name="RELACIONA BITS_3" />
+  <item name="RELACIONA BITS_2" />
+  <item name="QUIN BIT ÉS?_3" />
+  <item name="QUIN BIT ÉS?_2" />
+  <item name="QUIN BIT ÉS?" />
+  <item name="QUIN BIT ÉS?_5" />
+  <item name="QUIN BIT ÉS?_4" />
+  <item name="QUIN BIT ÉS?_24" />
+  <item name="QUIN BIT ÉS?_23" />
+  <item name="QUIN BIT ÉS?_22" />
+  <item name="QUIN BIT ÉS?_21" />
+  <item name="QUIN BIT ÉS?_20" />
+  <item name="QUIN BIT ÉS?_19" />
+  <item name="QUIN BIT ÉS?_18" />
+  <item name="QUIN BIT ÉS?_17" />
+  <item name="QUIN BIT ÉS?_16" />
+  <item name="QUIN BIT ÉS?_15" />
+  <item name="QUIN BIT ÉS?_14" />
+  <item name="QUIN BIT ÉS?_13" />
+  <item name="QUIN BIT ÉS?_12" />
+  <item name="QUIN BIT ÉS?_11" />
+  <item name="QUIN BIT ÉS?_10" />
+  <item name="QUIN BIT ÉS?_9" />
+  <item name="QUIN BIT ÉS?_8" />
+  <item name="QUIN BIT ÉS?_7" />
+  <item name="QUIN BIT ÉS?_6" />
+  <item name="Troba les parelles_2" />
+  <item name="Troba les parelles" />
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="PORTADA">
+   <messages />
+   <settings margin="8" report="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="700.0" cellHeight="400.0" border="true">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="connectabits Portada-resized.jpg" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0001-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>1</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_10" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0012-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>12</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_11" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0018-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>18</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_12" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0014-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>14</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_13" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0005-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>5</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_14" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0021-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>21</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_15" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0007-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>7</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_16" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0019-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_17" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0013-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>13</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_18" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0009-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_19" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0004-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>4</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_2" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0002-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_20" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0016-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>16</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_21" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0010-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>10</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_22" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0024-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>24</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_23" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0008-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>8</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_24" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0020-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_3" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0003-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_4" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0015-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>15</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_5" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0006-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>6</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_6" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0017-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>17</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_7" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0022-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>22</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_8" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0011-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>11</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN BIT ÉS?_9" code="">
+   <description>
+    <p>Escriure el número que apareix en la imatge en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Digues quin número és.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="500.0" cellHeight="281.0" border="true" id="primary">
+    <style borderStroke="0.0" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0" image="BITS 1-24_page-0023-resized.jpg" />
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>23</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA BITS" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Relaciona els bits amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="350.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xFFFFFF" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0013-resized.jpg" />
+    <cell image="BITS 1-24_page-0017-resized.jpg" />
+    <cell image="BITS 1-24_page-0022-resized.jpg" />
+    <cell image="BITS 1-24_page-0015-resized.jpg" />
+    <cell image="BITS 1-24_page-0023-resized.jpg" />
+    <cell image="BITS 1-24_page-0020-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>22</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>23</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Relaciona els bits</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="350.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xFFFFFF" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0010-resized.jpg" />
+    <cell image="BITS 1-24_page-0006-resized.jpg" />
+    <cell image="BITS 1-24_page-0012-resized.jpg" />
+    <cell image="BITS 1-24_page-0003-resized.jpg" />
+    <cell image="BITS 1-24_page-0018-resized.jpg" />
+    <cell image="BITS 1-24_page-0021-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Relaciona els bits</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="350.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xFFFFFF" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0002-resized.jpg" />
+    <cell image="BITS 1-24_page-0005-resized.jpg" />
+    <cell image="BITS 1-24_page-0008-resized.jpg" />
+    <cell image="BITS 1-24_page-0011-resized.jpg" />
+    <cell image="BITS 1-24_page-0016-resized.jpg" />
+    <cell image="BITS 1-24_page-0024-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_4" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Relaciona els bits</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="350.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xFFFFFF" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0001-resized.jpg" />
+    <cell image="BITS 1-24_page-0004-resized.jpg" />
+    <cell image="BITS 1-24_page-0007-resized.jpg" />
+    <cell image="BITS 1-24_page-0009-resized.jpg" />
+    <cell image="BITS 1-24_page-0014-resized.jpg" />
+    <cell image="BITS 1-24_page-0019-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Troba les parelles" code="">
+   <description>
+    <p>Resoldre el tauler emparellant totes les fitxes amb bits amb el nombre corresponen mitjançant mecàniques de memòria clàssica.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Troba les parelles</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="169.0" border="true" id="primary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" alternative="0x000000" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0015-resized.jpg" />
+    <cell image="BITS 1-24_page-0011-resized.jpg" />
+    <cell image="BITS 1-24_page-0017-resized.jpg" />
+    <cell image="BITS 1-24_page-0002-resized.jpg" />
+    <cell image="BITS 1-24_page-0024-resized.jpg" />
+    <cell image="BITS 1-24_page-0008-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>11</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Troba les parelles_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xEDF7F7" inactive="0xEDF7F7" />
+     </style>
+     <p>Troba les parelles.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="169.0" border="true" id="primary">
+    <style borderStroke="2.1" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" alternative="0x000000" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="BITS 1-24_page-0001-resized.jpg" />
+    <cell image="BITS 1-24_page-0007-resized.jpg" />
+    <cell image="BITS 1-24_page-0019-resized.jpg" />
+    <cell image="BITS 1-24_page-0012-resized.jpg" />
+    <cell image="BITS 1-24_page-0022-resized.jpg" />
+    <cell image="BITS 1-24_page-0014-resized.jpg" />
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>19</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>22</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="BITS 1-24_page-0001-resized.jpg" file="bits_1-24_page-0001-resized.jpg" />
+  <media name="BITS 1-24_page-0002-resized.jpg" file="bits_1-24_page-0002-resized.jpg" />
+  <media name="BITS 1-24_page-0003-resized.jpg" file="bits_1-24_page-0003-resized.jpg" />
+  <media name="BITS 1-24_page-0004-resized.jpg" file="bits_1-24_page-0004-resized.jpg" />
+  <media name="BITS 1-24_page-0005-resized.jpg" file="bits_1-24_page-0005-resized.jpg" />
+  <media name="BITS 1-24_page-0006-resized.jpg" file="bits_1-24_page-0006-resized.jpg" />
+  <media name="BITS 1-24_page-0007-resized.jpg" file="bits_1-24_page-0007-resized.jpg" />
+  <media name="BITS 1-24_page-0008-resized.jpg" file="bits_1-24_page-0008-resized.jpg" />
+  <media name="BITS 1-24_page-0009-resized.jpg" file="bits_1-24_page-0009-resized.jpg" />
+  <media name="BITS 1-24_page-0010-resized.jpg" file="bits_1-24_page-0010-resized.jpg" />
+  <media name="BITS 1-24_page-0011-resized.jpg" file="bits_1-24_page-0011-resized.jpg" />
+  <media name="BITS 1-24_page-0012-resized.jpg" file="bits_1-24_page-0012-resized.jpg" />
+  <media name="BITS 1-24_page-0013-resized.jpg" file="bits_1-24_page-0013-resized.jpg" />
+  <media name="BITS 1-24_page-0014-resized.jpg" file="bits_1-24_page-0014-resized.jpg" />
+  <media name="BITS 1-24_page-0015-resized.jpg" file="bits_1-24_page-0015-resized.jpg" />
+  <media name="BITS 1-24_page-0016-resized.jpg" file="bits_1-24_page-0016-resized.jpg" />
+  <media name="BITS 1-24_page-0017-resized.jpg" file="bits_1-24_page-0017-resized.jpg" />
+  <media name="BITS 1-24_page-0018-resized.jpg" file="bits_1-24_page-0018-resized.jpg" />
+  <media name="BITS 1-24_page-0019-resized.jpg" file="bits_1-24_page-0019-resized.jpg" />
+  <media name="BITS 1-24_page-0020-resized.jpg" file="bits_1-24_page-0020-resized.jpg" />
+  <media name="BITS 1-24_page-0021-resized.jpg" file="bits_1-24_page-0021-resized.jpg" />
+  <media name="BITS 1-24_page-0022-resized.jpg" file="bits_1-24_page-0022-resized.jpg" />
+  <media name="BITS 1-24_page-0023-resized.jpg" file="bits_1-24_page-0023-resized.jpg" />
+  <media name="BITS 1-24_page-0024-resized.jpg" file="bits_1-24_page-0024-resized.jpg" />
+  <media name="connectabits Portada-resized.jpg" file="connectabits_portada-resized.jpg" />
+ </mediaBag>
+</JClicProject>
+

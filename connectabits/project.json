@@ -1,0 +1,73 @@
+{
+  "title": "Bits 1-24",
+  "author": "Carla García Carranzo",
+  "date": "18/09/26",
+  "langCodes": [
+    "ca"
+  ],
+  "languages": {
+    "ca": "català"
+  },
+  "areaCodes": [
+    "mat"
+  ],
+  "areas": {
+    "ca": "Matemàtiques"
+  },
+  "levelCodes": [
+    "PRI"
+  ],
+  "levels": {
+    "ca": "Primària (6-12)"
+  },
+  "description": {},
+  "license": {
+    "ca": "Aquesta obra està sota una llicència de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "ca"
+  ],
+  "mainFile": "bits_1-24.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 31,
+  "mediaFiles": 30,
+  "totalSize": 592049,
+  "files": [
+    "bits_1-24.jclic",
+    "bits_1-24.jclic.js",
+    "bits_1-24_page-0001-resized.jpg",
+    "bits_1-24_page-0002-resized.jpg",
+    "bits_1-24_page-0003-resized.jpg",
+    "bits_1-24_page-0004-resized.jpg",
+    "bits_1-24_page-0005-resized.jpg",
+    "bits_1-24_page-0006-resized.jpg",
+    "bits_1-24_page-0007-resized.jpg",
+    "bits_1-24_page-0008-resized.jpg",
+    "bits_1-24_page-0009-resized.jpg",
+    "bits_1-24_page-0010-resized.jpg",
+    "bits_1-24_page-0011-resized.jpg",
+    "bits_1-24_page-0012-resized.jpg",
+    "bits_1-24_page-0013-resized.jpg",
+    "bits_1-24_page-0014-resized.jpg",
+    "bits_1-24_page-0015-resized.jpg",
+    "bits_1-24_page-0016-resized.jpg",
+    "bits_1-24_page-0017-resized.jpg",
+    "bits_1-24_page-0018-resized.jpg",
+    "bits_1-24_page-0019-resized.jpg",
+    "bits_1-24_page-0020-resized.jpg",
+    "bits_1-24_page-0021-resized.jpg",
+    "bits_1-24_page-0022-resized.jpg",
+    "bits_1-24_page-0023-resized.jpg",
+    "bits_1-24_page-0024-resized.jpg",
+    "connectabits_portada-resized.jpg",
+    "favicon.ico",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json"
+  ]
+}

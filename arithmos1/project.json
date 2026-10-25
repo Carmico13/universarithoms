@@ -1,0 +1,48 @@
+{
+  "title": "Arithmós I",
+  "author": "Carla Garcia Carranzo",
+  "date": "29/07/26",
+  "areaCodes": [
+    "mat"
+  ],
+  "areas": {
+    "ca": "Matemàtiques"
+  },
+  "levelCodes": [
+    "PRI"
+  ],
+  "levels": {
+    "ca": "Primària (6-12)"
+  },
+  "description": {},
+  "license": {
+    "ca": "Aquesta obra està sota una llicència de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "ca"
+  ],
+  "cover": "arithmos_1_portada-resized.jpg",
+  "mainFile": "joc_descomposicio.jclic",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 51,
+  "mediaFiles": 11,
+  "totalSize": 730254,
+  "files": [
+    "arithmos_1_portada-resized.jpg",
+    "favicon.ico",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "joc_descomposicio.jclic",
+    "joc_descomposicio.jclic.js",
+    "project-thumb.jpg",
+    "project.json",
+    "trencaclosques_1-resized.jpg",
+    "trencaclosques_2-resized.jpg",
+    "trencaclosques_3-resized.jpg",
+    "trencaclosques_4-resized.jpg",
+    "trencaclosques_5-resized.jpg",
+    "trencaclosques_6-resized.jpg"
+  ]
+}

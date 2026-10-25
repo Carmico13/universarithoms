@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de preguntes</title>
+    <style>
+        *{
+            transition: all 0.3s;
+            font-family: Helvetica;
+        }
+        body{
+            background-color: burlywood;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 120%;
+        }
+        .contenedor{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .encabezado{
+            background-color: ivory;
+            min-width: 300px;
+            width: 70%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .categoria{
+            opacity: 0.3;
+            text-align: left;
+        }
+
+        .pregunta{
+          padding: 10px;  
+        }
+
+        .imatge{
+          object-fit: cover;  
+          height: 200px;
+          width: 100%;
+          background: ivory; 
+        }
+
+        .btn{
+           background-color: ivory; 
+           width: 60%;
+           max-width: 550px;
+           padding: 10px;
+           margin: 5px auto;
+        }
+        .btn:hover {
+            background-color: cadetblue;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="encabezado">
+            <div class="Categoria" id="categoria">Categoria</div>
+            <div class="Pregunta" id="pregunta">Pregunta</div>
+            <img src="" class="imatge" id="imatge">
+        </div> <!-- Tancament correcte del div de l'encabezado -->
+
+        <div class="btn" id="btn1" onclick="oprimir_btn(0)">Opció 1</div>
+        <div class="btn" id="btn2" onclick="oprimir_btn(1)">Opció 2</div>
+        <div class="btn" id="btn3" onclick="oprimir_btn(2)">Opció 3</div>
+        <div class="btn" id="btn4" onclick="oprimir_btn(3)">Opció 4</div>
+    </div>
+
+    <script>
+        let base_preguntas = readtext("base_preguntes.json"); 
+        let interprete_bp = JSON.parse(base_preguntas);
+        let pregunta;
+        let posibles_respuestas = [];
+        
+        let btn_correspondiente = [
+            select_id("btn1"),
+            select_id("btn2"),
+            select_id("btn3"),
+            select_id("btn4")
+        ];
+
+        // Executem la primera pregunta en carregar
+        escogerPreguntaAleatoria();
+
+        function escogerPreguntaAleatoria() {
+            let n = Math.floor(Math.random() * interprete_bp.length);
+            escogerPregunta(n);
+        }
+
+        function escogerPregunta(n) {
+            pregunta = interprete_bp[n];
+            
+            // Assignem categoria i pregunta
+            select_id("categoria").innerHTML = pregunta.categoria; 
+            select_id("pregunta").innerHTML = pregunta.Pregunta; 
+            
+            // Configurem la imatge i l'objectFit corregit
+            select_id("imatge").setAttribute("src", pregunta.imatge);
+            style("imatge").objectFit = pregunta.objectFit; 
+            
+            if(pregunta.imatge){
+                style("imatge").height = "200px";
+                style("imatge").width = "100%";
+            } else {
+                style("imatge").height = "0px";
+                style("imatge").width = "0px";
+            }
+
+            desordenarRespuestas();
+        }
+
+        function desordenarRespuestas() {
+            posibles_respuestas = [
+                pregunta.respuesta, 
+                pregunta.incorrecta1, 
+                pregunta.incorrecta2, 
+                pregunta.incorrecta3
+            ];
+            
+            posibles_respuestas.sort(() => Math.random() - 0.5);
+
+            select_id("btn1").innerHTML = posibles_respuestas[0];
+            select_id("btn2").innerHTML = posibles_respuestas[1];
+            select_id("btn3").innerHTML = posibles_respuestas[2];
+            select_id("btn4").innerHTML = posibles_respuestas[3];
+        }
+
+        function oprimir_btn(i) {
+            if(posibles_respuestas[i] == pregunta.respuesta){
+                btn_correspondiente[i].style.background = "lightgreen";
+            } else {
+                btn_correspondiente[i].style.background = "pink";
+            }
+            setTimeout(() => {
+                reiniciar();
+            }, 3000); // 3 segons
+        }
+
+        function reiniciar() {
+            for (const btn of btn_correspondiente) {
+                btn.style.background = "white";
+            }
+            escogerPreguntaAleatoria();
+        }
+
+        function select_id(id) {
+            return document.getElementById(id); 
+        }
+        
+
+        function style(id) {
+            return select_id(id).style; 
+        }
+
+        function readtext(ruta_local) {
+            var text = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("get", ruta_local, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                text = xmlhttp.responseText;
+            }
+            return text; 
+        }
+    </script>
+    
+</body>
+</html>

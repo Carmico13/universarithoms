@@ -1,0 +1,3119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="joc_descomposicio" version="0.1.3">
+ <settings>
+  <title>Arithmós I</title>
+  <revision description="created" date="7/29/26" />
+  <author name="Carla Garcia Carranzo" />
+  <descriptors area-codes="mat" level-codes="PRI" />
+  <cover file="Arithmos 1 Portada-resized.jpg" />
+  <meta_langs>ca</meta_langs>
+  <descriptions>
+   <description language="ca" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="PORTADA" name="PORTADA" />
+  <item id="start" name="Index?" />
+  <item id="Nivell 1" name="Valor posicional 1" />
+  <item name="Els &quot;amics&quot; del 10" />
+  <item name="Sumes 1" />
+  <item name="Restes 1" />
+  <item name="Trencaclosques 1" />
+  <item name="Ordena els números 1" />
+  <item name="Index?" />
+  <item id="Nivell 2" name="Valor posicional 2" />
+  <item name="Sumes 2" />
+  <item name="Restes 2" />
+  <item name="Busca els números" />
+  <item name="Sopa de lletres nivell 1" />
+  <item name="Recordatori 1" />
+  <item name="Identifica les unitats" />
+  <item name="Index?" />
+  <item id="Nivell 3" name="Valor posicional 3" />
+  <item name="Sumes 3" />
+  <item name="Restes 3" />
+  <item name="Trencaclosques 2" />
+  <item name="Ordena els números 2" />
+  <item name="Endevinalla 1" />
+  <item name="Index?" />
+  <item id="Nivell 4" name="Valor posicional 4" />
+  <item name="Sumes 4" />
+  <item name="Restes 4" />
+  <item name="Busca els números 2" />
+  <item name="Sopa de lletres nivell 2" />
+  <item name="Endevinalla 2" />
+  <item name="Index?" />
+  <item id="Nivell 5" name="Valor posicional 5" />
+  <item name="Sumes 5" />
+  <item name="Restes 5" />
+  <item name="Ordena els números 3" />
+  <item name="Trencaclosques 3" />
+  <item name="Endevinalla 3" />
+  <item name="Index?" />
+  <item id="Nivell 6" name="Recordatori 1" />
+  <item name="Identifica les desenes" />
+  <item name="Sumes 6" />
+  <item name="Restes 6" />
+  <item name="Endevinalla 4" />
+  <item name="Trencaclosques 4" />
+  <item name="Endevinalla 5" />
+  <item name="Index?" />
+  <item id="Nivell 7" name="Ordena els números 4" />
+  <item name="Sumes 7" />
+  <item name="Trencaclosques 5" />
+  <item name="Restes 7" />
+  <item name="Sopa de lletres nivell 3" />
+  <item name="Endevinalla 6" />
+  <item name="Index?" />
+  <item id="Nivell 8" name="Recordatori 1" />
+  <item name="Identifica les centenes" />
+  <item name="Sumes 8" />
+  <item name="Restes 8" />
+  <item name="Endevinalla 7" />
+  <item name="Trencaclosques 6" />
+  <item name="Endevinalla 8" />
+  <item name="Index?" />
+ </sequence>
+ <activities>
+  <activity class="@memory.MemoryGame" name="Busca els números" code="">
+   <description>
+    <p>Resoldre el tauler emparellant totes les fitxes amb números idèntics mitjançant mecàniques de memòria clàssica.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Busca dos nombres IGUALS.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>1859</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>195</p>
+    </cell>
+    <cell>
+     <p>739</p>
+    </cell>
+    <cell>
+     <p>3658</p>
+    </cell>
+    <cell>
+     <p>49</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>654</p>
+    </cell>
+    <cell>
+     <p>4632</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="Busca els números 2" code="">
+   <description>
+    <p>Resoldre el tauler emparellant totes les fitxes amb números idèntics mitjançant mecàniques de memòria clàssica.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Busca dos nombres IGUALS.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <p>6352</p>
+    </cell>
+    <cell>
+     <p>34</p>
+    </cell>
+    <cell>
+     <p>412</p>
+    </cell>
+    <cell>
+     <p>326</p>
+    </cell>
+    <cell>
+     <p>8426</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+    <cell>
+     <p>731</p>
+    </cell>
+    <cell>
+     <p>1862</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Els &quot;amics&quot; del 10" code="">
+   <description>
+    <p>Identificar quines sumes de dos números sumen 10, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Quines parelles de números sumen 10?</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>6</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>3</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 1">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>El senyor Ramon té 3 melons i en ven dos. Quants melons li queden?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>1</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 2">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Si tens 4 bunyols i te’n menges un, quants te’n quedaran?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 3">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>L’àvia m’ha regalat 3 cotxes i el pare un altre. Quants cotxes tinc?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>4</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 4">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Per esmorzar portes tres preses de xocolata i te’n menges dues. Quantes te’n queden?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>1</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 5">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Si dins del llitet hi ha una nina i dins del cotxet hi ha una altra nina, quantes nines hi ha?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 6" code="">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Si tens 4 petxines i en perds dues, quantes te’n quedaran?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 7">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>Dilluns vaig guanyar 4 cromos i dimarts en vaig perdre dos. Quants n’he guanyat entre tots</p>
+     <p>dos dies?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Endevinalla 8">
+   <description>
+    <p>Resoldre les endevinalles teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Resol la següent endevinalla amb el número corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Molt ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="600.0" cellHeight="200.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell id="0">
+     <p>El gat s’ha menjat 1 sardina. Ara li queden dues. Quantes sardines tenia?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>3</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.Identify" name="Identifica les centenes" code="" type="identifyWords">
+   <description>
+    <p>Identificar dins d’una llista de números fent fer clic sobre els números concrets d'una llista. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Clica a tots els números que tenen un 7 a les centenes.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true">
+     <size width="800" height="145" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>735,</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> 176, 332, </text>
+      <target>753,</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> 434, 695, </text>
+      <target>776</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> i </text>
+      <target>733</target>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="Identifica les desenes" code="" type="identifyWords">
+   <description>
+    <p>Identificar dins d’una llista de números fent fer clic sobre els números concrets d'una llista. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Clica a tots els números que tenen un 3 a les desenes.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true">
+     <size width="800" height="145" />
+    </window>
+   </settings>
+   <checkButton />
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>36,</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> </text>
+      <target>935,</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> 853, </text>
+      <target>332,</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> 376, 65, </text>
+      <target>434</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> i </text>
+      <target>833</target>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@text.Identify" name="Identifica les unitats" type="identifyWords">
+   <description>
+    <p>Identificar dins d’una llista de números fent fer clic sobre els números concrets d'una llista. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Clica a tots els números que tenen un 6 a les unitats.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true">
+     <size width="800" height="145" />
+    </window>
+   </settings>
+   <checkButton>Ja estic!</checkButton>
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <target>36</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false">, </text>
+      <target>956</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false">, 852, 662, </text>
+      <target>376</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false">, 65, </text>
+      <target>486</target>
+      <text family="Arial" background="0xFFFFFF" size="48" bold="false" italic="false"> i 853</text>
+     </p>
+    </section>
+   </document>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Index?" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>ESCULL QUIN NIVELL VOLS REALITZAR</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="300.0" cellHeight="300.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" bold="true" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell border="true">
+     <style borderStroke="2.1" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 1" />
+     <p>1</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.0" markerStroke="2.7">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 2" />
+     <p>2</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="1.9" markerStroke="2.7">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 3" />
+     <p>3</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.1" markerStroke="2.7">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 4" />
+     <p>4</p>
+    </cell>
+    <cell>
+     <style borderStroke="1.2" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 5" />
+     <p>5</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="1.9" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 6" />
+     <p>6</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="1.9" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 7" />
+     <p>7</p>
+    </cell>
+    <cell border="true">
+     <style borderStroke="2.0" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color background="0xDFCCB8" border="0xC8A583" />
+     </style>
+     <media type="RUN_CLIC_PACKAGE" level="1" file="Nivell 8" />
+     <p>8</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ordena els números 1" code="">
+   <description>
+    <p>Ordenar els nombres de més PETIT a més GRAN. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Ordena els nombres de més PETIT a més GRAN.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="300.0" cellHeight="150.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>42</p>
+    </cell>
+    <cell>
+     <p>108</p>
+    </cell>
+    <cell>
+     <p>350</p>
+    </cell>
+    <cell>
+     <p>891</p>
+    </cell>
+    <cell>
+     <p>972</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ordena els números 2" code="">
+   <description>
+    <p>Ordenar els nombres de més PETIT a més GRAN. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Ordena els nombres de més PETIT a més GRAN.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="300.0" cellHeight="150.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>250</p>
+    </cell>
+    <cell>
+     <p>400</p>
+    </cell>
+    <cell>
+     <p>550</p>
+    </cell>
+    <cell>
+     <p>700</p>
+    </cell>
+    <cell>
+     <p>850</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ordena els números 3" code="">
+   <description>
+    <p>Ordenar els nombres de més PETIT a més GRAN. </p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Ordena els nombres de més PETIT a més GRAN.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="300.0" cellHeight="150.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>89</p>
+    </cell>
+    <cell>
+     <p>156</p>
+    </cell>
+    <cell>
+     <p>433</p>
+    </cell>
+    <cell>
+     <p>998</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Ordena els números 4" code="">
+   <description>
+    <p>Ordenar els nombres de més PETIT a més GRAN.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Ordena els nombres de més PETIT a més GRAN.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="6" cellWidth="300.0" cellHeight="150.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="6" rows="1" />
+    <cell>
+     <p>910</p>
+    </cell>
+    <cell>
+     <p>925</p>
+    </cell>
+    <cell>
+     <p>940</p>
+    </cell>
+    <cell>
+     <p>955</p>
+    </cell>
+    <cell>
+     <p>970</p>
+    </cell>
+    <cell>
+     <p>985</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="PORTADA">
+   <messages />
+   <settings margin="8" report="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="745.0" cellHeight="425.0" border="true">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="Arithmos 1 Portada-resized.jpg" />
+   </cells>
+  </activity>
+  <activity class="@panels.Explore" name="Recordatori 1" code="">
+   <description>
+    <p>Recordar el nom dels valors posicionals. </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Llegeix atentament. </p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Ja estàs preparada per la següent activitat!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <helpWindow>
+     <p>En fer clic a una casella, apareix informació a l'altra banda.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="3" cols="1" cellWidth="200.0" cellHeight="106.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell id="0">
+     <p>UNITATS</p>
+    </cell>
+    <cell id="1">
+     <p>DESENES</p>
+    </cell>
+    <cell id="2">
+     <p>CENTENES</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="500.0" cellHeight="106.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>1, 2, 3... fins al 9 </p>
+     <p>Són les peces soltes. </p>
+    </cell>
+    <cell>
+     <p>10, 20, 30... </p>
+     <p>Són torres de 10 peces soltes. </p>
+    </cell>
+    <cell>
+     <p>100, 200, 300...</p>
+     <p>Són plaques o quadrats grans fetes de 10 torres.</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Restes 1">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Enhorabona!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>10 - 3</p>
+    </cell>
+    <cell>
+     <p>10 - 6</p>
+    </cell>
+    <cell>
+     <p>10 - 8</p>
+    </cell>
+    <cell>
+     <p>10 - 1</p>
+    </cell>
+    <cell>
+     <p>10 - 5</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>2</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Restes 2">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <style>
+      <font family="Arial" size="48" />
+      <color background="0xDFCCB8" />
+     </style>
+     <p>14 - 10 </p>
+    </cell>
+    <cell>
+     <p>28 - 10</p>
+    </cell>
+    <cell>
+     <p>35 - 10</p>
+    </cell>
+    <cell>
+     <p>53 - 10</p>
+    </cell>
+    <cell>
+     <p>87 - 10</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>4</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>43</p>
+    </cell>
+    <cell>
+     <p>77</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Restes 3" code="" inverse="true">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Feliciats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="2">
+     <p>13 - 4</p>
+    </cell>
+    <cell id="1">
+     <p>15 - 7</p>
+    </cell>
+    <cell id="0">
+     <p>12 - 5</p>
+    </cell>
+    <cell id="1">
+     <p>16 - 8</p>
+    </cell>
+    <cell id="1">
+     <p>14 - 6</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>7</p>
+    </cell>
+    <cell>
+     <p>8</p>
+    </cell>
+    <cell>
+     <p>9</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Restes 4" code="">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Bona feina!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="1">
+     <p>40 - 20</p>
+    </cell>
+    <cell id="2">
+     <p>60 - 30</p>
+    </cell>
+    <cell id="0">
+     <p>50 - 40</p>
+    </cell>
+    <cell id="2">
+     <p>90 - 60</p>
+    </cell>
+    <cell id="2">
+     <p>80 - 50</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Restes 5">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Bona feina!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>45 - 23</p>
+    </cell>
+    <cell>
+     <p>57 - 25</p>
+    </cell>
+    <cell>
+     <p>68 - 34</p>
+    </cell>
+    <cell>
+     <p>77 - 42</p>
+    </cell>
+    <cell>
+     <p>89 - 14</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>22</p>
+    </cell>
+    <cell>
+     <p>32</p>
+    </cell>
+    <cell>
+     <p>34</p>
+    </cell>
+    <cell>
+     <p>35</p>
+    </cell>
+    <cell>
+     <p>75</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Restes 6" code="">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Bona feina!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>24 - 9</p>
+    </cell>
+    <cell>
+     <p>45 - 9</p>
+    </cell>
+    <cell>
+     <p>52 - 8</p>
+    </cell>
+    <cell>
+     <p>73 - 9</p>
+    </cell>
+    <cell>
+     <p>84 - 8</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>36</p>
+    </cell>
+    <cell>
+     <p>44</p>
+    </cell>
+    <cell>
+     <p>64</p>
+    </cell>
+    <cell>
+     <p>76</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Restes 7" code="" inverse="true">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Bona feina!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>42 - 15</p>
+    </cell>
+    <cell id="1">
+     <p>54 - 25</p>
+    </cell>
+    <cell id="2">
+     <p>63 - 35</p>
+    </cell>
+    <cell id="2">
+     <p>85 - 47</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>27</p>
+    </cell>
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell>
+     <p>28</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Restes 8">
+   <description>
+    <p>Relacionar les restes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Emparella la resta amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Bona feina!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>100 - 25</p>
+    </cell>
+    <cell>
+     <p>200 - 50</p>
+    </cell>
+    <cell>
+     <p>350 - 150</p>
+    </cell>
+    <cell>
+     <p>500 - 250</p>
+    </cell>
+    <cell>
+     <p>1.000 - 500</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>75</p>
+    </cell>
+    <cell>
+     <p>150</p>
+    </cell>
+    <cell>
+     <p>200</p>
+    </cell>
+    <cell>
+     <p>250</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa de lletres nivell 1" code="">
+   <description>
+    <p>Buscar el nom dels números.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Troba tots els números amagats. 2, 3, 4, 5, 6, 7, 8 i 9</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Els números que has de buscar són el dos, tres, quatre, cinc, sis, set, vuit i nou.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <textGrid rows="7" columns="7" cellWidth="100.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <text>
+     <row>SIS***N</row>
+     <row>*U*T*QO</row>
+     <row>C**R*UU</row>
+     <row>I**E*A*</row>
+     <row>NDOS*T*</row>
+     <row>C****R*</row>
+     <row>VUITSET</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">DOS</clue>
+    <clue id="1">TRES</clue>
+    <clue id="2">QUATRE</clue>
+    <clue id="3">CINC</clue>
+    <clue id="4">SIS</clue>
+    <clue id="5">SET</clue>
+    <clue id="6">VUIT</clue>
+    <clue id="7">NOU</clue>
+   </clues>
+   <cells rows="1" cols="1" cellWidth="296.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>2, 3, 4, 5, 6, 7, 8 i 9</p>
+    </cell>
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa de lletres nivell 2" code="">
+   <description>
+    <p>Buscar el nom dels números.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Troba tots els números amagats. 96, 16, 31, 29 i 77.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Enhorabona!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Els números que has de buscar són el noranta-sis, setze, trenta-u, vint-i-nou i setanta-set.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="100.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <text>
+     <row>*********S</row>
+     <row>VINTINOU*E</row>
+     <row>***R*****T</row>
+     <row>***E*****Z</row>
+     <row>***N*****E</row>
+     <row>***T******</row>
+     <row>***A******</row>
+     <row>***U******</row>
+     <row>NORANTASIS</row>
+     <row>SETANTASET</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">NORANTASIS</clue>
+    <clue id="1">SETZE</clue>
+    <clue id="2">VINTINOU</clue>
+    <clue id="3">SETANTASET</clue>
+    <clue id="4">TRENTAU</clue>
+   </clues>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>96, 16, 31, 29 i 77</p>
+    </cell>
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Sopa de lletres nivell 3" code="">
+   <description>
+    <p>Buscar el nom dels números.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Troba tots els números amagats. 100, 200, 500, 600, 800 i 900.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>cent, dos-cents, cinc-cents, sis-cents, set-cents , vuit-cents i nou-cents.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <textGrid rows="10" columns="10" cellWidth="100.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <text>
+     <row>C*********</row>
+     <row>I*CENT***S</row>
+     <row>N********T</row>
+     <row>CDOSCENTSN</row>
+     <row>C********E</row>
+     <row>ESTNECUONC</row>
+     <row>NVUITCENTS</row>
+     <row>T********I</row>
+     <row>S*SETCENTS</row>
+     <row>**********</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">NOUCENTS</clue>
+    <clue id="1">DOSCENTS</clue>
+    <clue id="2">CENT</clue>
+    <clue id="3">VUITCENTS</clue>
+    <clue id="4">CINCCENTS</clue>
+    <clue id="5">SISCENTS</clue>
+    <clue id="6">SETCENTS</clue>
+   </clues>
+   <cells rows="1" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell>
+     <p>100, 200, 500, 600, 800 i 900</p>
+    </cell>
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Sumes 1" code="">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="6" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="6" />
+    <cell id="0">
+     <p>6 + 4</p>
+    </cell>
+    <cell id="1">
+     <p>12 + 8</p>
+    </cell>
+    <cell id="2">
+     <p>15 + 15</p>
+    </cell>
+    <cell id="1">
+     <p>7 + 13</p>
+    </cell>
+    <cell id="0">
+     <p>1 + 9</p>
+    </cell>
+    <cell id="2">
+     <p>14 + 16</p>
+    </cell>
+   </cells>
+   <cells rows="3" cols="1" cellWidth="300.0" cellHeight="200.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="3" />
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>20</p>
+    </cell>
+    <cell>
+     <p>30</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Sumes 2">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>10 + 4</p>
+    </cell>
+    <cell id="1">
+     <p>10 + 8</p>
+    </cell>
+    <cell>
+     <p>15 + 10</p>
+    </cell>
+    <cell>
+     <p>23 + 10</p>
+    </cell>
+    <cell>
+     <p>47 + 10</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>18</p>
+    </cell>
+    <cell>
+     <p>25</p>
+    </cell>
+    <cell>
+     <p>33</p>
+    </cell>
+    <cell>
+     <p>57</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Sumes 3">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>9 + 4</p>
+    </cell>
+    <cell id="1">
+     <p>8 + 6</p>
+    </cell>
+    <cell>
+     <p>7 + 5</p>
+    </cell>
+    <cell>
+     <p>8 + 7</p>
+    </cell>
+    <cell>
+     <p>9 + 8</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>13</p>
+    </cell>
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="Sumes 4" inverse="true">
+   <description>
+    <p>Resoldre les sumes teclejant exactament la resposta correcta en un requadre de text.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell id="0">
+     <p>20 + 30</p>
+    </cell>
+    <cell id="1">
+     <p>40 + 20</p>
+    </cell>
+    <cell id="2">
+     <p>50 + 40</p>
+    </cell>
+    <cell id="3">
+     <p>60 + 20</p>
+    </cell>
+    <cell id="4">
+     <p>30 + 40</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>90</p>
+    </cell>
+    <cell>
+     <p>80</p>
+    </cell>
+    <cell>
+     <p>70</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Sumes 5" code="">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Enhorabona!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>24 + 13</p>
+    </cell>
+    <cell id="1">
+     <p>42 + 25</p>
+    </cell>
+    <cell id="2">
+     <p>51 + 34</p>
+    </cell>
+    <cell id="2">
+     <p>75 + 14</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>37</p>
+    </cell>
+    <cell>
+     <p>67</p>
+    </cell>
+    <cell>
+     <p>85</p>
+    </cell>
+    <cell>
+     <p>89</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Sumes 6">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>24 + 9</p>
+    </cell>
+    <cell>
+     <p>45 + 9</p>
+    </cell>
+    <cell>
+     <p>52 + 8</p>
+    </cell>
+    <cell>
+     <p>66 + 9</p>
+    </cell>
+    <cell>
+     <p>84 + 8</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>33</p>
+    </cell>
+    <cell>
+     <p>54</p>
+    </cell>
+    <cell>
+     <p>60</p>
+    </cell>
+    <cell>
+     <p>75</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Sumes 7" code="" inverse="true">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, cal tenir present que un element del Plafó B pot estar relacionat amb diversos elements del Plafó A.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Ben fet!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>36 + 25</p>
+    </cell>
+    <cell id="1">
+     <p>48 + 24</p>
+    </cell>
+    <cell id="2">
+     <p>57 + 35</p>
+    </cell>
+    <cell>
+     <p>64 + 27</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>61</p>
+    </cell>
+    <cell>
+     <p>72</p>
+    </cell>
+    <cell>
+     <p>92</p>
+    </cell>
+    <cell>
+     <p>91</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Sumes 8">
+   <description>
+    <p>Relacionar les sumes amb el resultat que correspon, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona les sumes amb el resultat corresponen.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Enhorabona!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>100 + 250</p>
+    </cell>
+    <cell>
+     <p>300 + 150</p>
+    </cell>
+    <cell>
+     <p>250 + 250</p>
+    </cell>
+    <cell>
+     <p>450 + 120</p>
+    </cell>
+    <cell>
+     <p>600 + 350</p>
+    </cell>
+   </cells>
+   <cells rows="5" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="5" />
+    <cell>
+     <p>350</p>
+    </cell>
+    <cell>
+     <p>450</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+    <cell>
+     <p>570</p>
+    </cell>
+    <cell>
+     <p>950</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Trencaclosques 1">
+   <description>
+    <p>Reconstruir la imatge original arrossegant les peces d'una banda de la pantalla cap a l'altra.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Arrossega i completa.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Objectiu aconseguit!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="5" border="true" image="Trencaclosques 1-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="5" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Trencaclosques 2">
+   <description>
+    <p>Reconstruir la imatge original arrossegant les peces d'una banda de la pantalla cap a l'altra.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Arrossega i completa.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Missió completada!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="3" border="true" image="Trencaclosques 2-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Trencaclosques 3">
+   <description>
+    <p>Reconstruir la imatge original arrossegant les peces d'una banda de la pantalla cap a l'altra.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Arrossega i completa.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Missió completada!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="Trencaclosques 3-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Trencaclosques 4" code="">
+   <description>
+    <p>Reconstruir la imatge original mitjançant l’intercanvi de peces. </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Fes clic a dues peces per intercanviar-les.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Missió completada!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="3" border="true" image="Trencaclosques 4-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="4" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Trencaclosques 5" code="">
+   <description>
+    <p>Reconstruir la imatge original mitjançant l’intercanvi de peces.  </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Fes clic a dues peces per intercanviar-les.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Missió completada!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les.</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="5" cols="3" border="true" image="Trencaclosques 5-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="5" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="Trencaclosques 6" code="">
+   <description>
+    <p>Reconstruir la imatge original mitjançant l’intercanvi de peces. </p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Fes clic a dues peces per intercanviar-les.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Missió completada!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Has de fer clic a dues peces per intercanviar-les</p>
+    </helpWindow>
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="Trencaclosques 6-resized.jpg">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Valor posicional 1" code="">
+   <description>
+    <p>Unir els números sencers amb la seva descomposició, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Uneix els números amb la seva descomposició.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="true">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>647</p>
+    </cell>
+    <cell>
+     <p>190</p>
+    </cell>
+    <cell>
+     <p>787</p>
+    </cell>
+    <cell>
+     <p>220</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>600 + 40 + 7</p>
+    </cell>
+    <cell>
+     <p>100 + 90 </p>
+    </cell>
+    <cell>
+     <p>700 + 80 + 7</p>
+    </cell>
+    <cell>
+     <p>200 + 20</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Valor posicional 2" code="">
+   <description>
+    <p>Unir els números sencers amb la seva descomposició, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Uneix els números sencers amb la seva descomposició.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>374</p>
+    </cell>
+    <cell>
+     <p>359</p>
+    </cell>
+    <cell>
+     <p>628</p>
+    </cell>
+    <cell>
+     <p>622</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>300 + 70 + 4</p>
+    </cell>
+    <cell>
+     <p>300 + 50 + 9</p>
+    </cell>
+    <cell>
+     <p>600 + 20 + 8</p>
+    </cell>
+    <cell>
+     <p>600 + 20 + 2</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Valor posicional 3" code="">
+   <description>
+    <p>Unir els números sencers amb la seva descomposició, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Uneix els números sencers amb la seva descomposició.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>103</p>
+    </cell>
+    <cell>
+     <p>201</p>
+    </cell>
+    <cell>
+     <p>820</p>
+    </cell>
+    <cell>
+     <p>360</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>100 + 3</p>
+    </cell>
+    <cell>
+     <p>200 + 1</p>
+    </cell>
+    <cell>
+     <p>800 + 20</p>
+    </cell>
+    <cell>
+     <p>300 + 60</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Valor posicional 4" code="">
+   <description>
+    <p>Unir els números sencers amb la seva descomposició, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Uneix els números sencers amb la seva descomposició.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>984</p>
+    </cell>
+    <cell>
+     <p>432</p>
+    </cell>
+    <cell>
+     <p>679</p>
+    </cell>
+    <cell>
+     <p>711</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>900 + 80 + 4</p>
+    </cell>
+    <cell>
+     <p>400 + 30 + 2</p>
+    </cell>
+    <cell>
+     <p>600 + 70 + 9</p>
+    </cell>
+    <cell>
+     <p>700 + 10 + 1</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Valor posicional 5" code="">
+   <description>
+    <p>Unir els números sencers amb la seva descomposició, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell border="true" type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Uneix els números sencers amb la seva descomposició.</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="18" />
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xDFCCB8" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="1.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>662</p>
+    </cell>
+    <cell>
+     <p>441</p>
+    </cell>
+    <cell>
+     <p>234</p>
+    </cell>
+    <cell>
+     <p>628</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.9" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>600 + 60 + 2</p>
+    </cell>
+    <cell>
+     <p>400 + 40 + 1</p>
+    </cell>
+    <cell>
+     <p>200 + 30 + 4</p>
+    </cell>
+    <cell>
+     <p>600 + 20 + 8</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Arithmos 1 Portada-resized.jpg" file="arithmos_1_portada-resized.jpg" />
+  <media name="Trencaclosques 1-resized.jpg" file="trencaclosques_1-resized.jpg" />
+  <media name="Trencaclosques 2-resized.jpg" file="trencaclosques_2-resized.jpg" />
+  <media name="Trencaclosques 3-resized.jpg" file="trencaclosques_3-resized.jpg" />
+  <media name="Trencaclosques 4-resized.jpg" file="trencaclosques_4-resized.jpg" />
+  <media name="Trencaclosques 5-resized.jpg" file="trencaclosques_5-resized.jpg" />
+  <media name="Trencaclosques 6-resized.jpg" file="trencaclosques_6-resized.jpg" />
+ </mediaBag>
+</JClicProject>
+

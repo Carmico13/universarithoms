@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Matemàtic de 4 Xifres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 100%);
+            color: #f8fafc;
+        }
+        canvas {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+            border-radius: 1rem;
+            background-color: #090d16;
+            touch-action: none;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .control-btn {
+            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+            transition: all 0.15s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .control-btn:active {
+            transform: scale(0.92);
+            background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-4 selection:bg-indigo-500 selection:text-white">
+
+    <!-- Capçalera / Títol -->
+    <header class="w-full max-w-4xl text-center my-2">
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
+            Snake de 4 Xifres
+        </h1>
+        <p class="text-sm text-slate-400 mt-1">Menja els números en ordre estrictament creixent. Fixa't en l'últim número menjat!</p>
+    </header>
+
+    <!-- Tauler d'Informació / HUD -->
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-3 my-2">
+        <!-- Vides -->
+        <div class="glass-panel p-3 rounded-xl flex items-center justify-between md:justify-around">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Vides (4)</span>
+            <div id="lives-container" class="flex gap-1.5 text-xl">
+                ❤️ ❤️ ❤️ ❤️
+            </div>
+        </div>
+
+        <!-- Últim Número Menjat -->
+        <div class="glass-panel p-3 rounded-xl flex items-center justify-between md:justify-around border-indigo-500/50 shadow-lg shadow-indigo-500/10">
+            <span class="text-xs uppercase tracking-wider text-indigo-300 font-semibold">Últim Menjat:</span>
+            <span id="last-eaten" class="text-2xl font-black text-indigo-400 tracking-wider">Cap</span>
+        </div>
+
+        <!-- Puntuació -->
+        <div class="glass-panel p-3 rounded-xl flex items-center justify-between md:justify-around">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Punts / Menjats</span>
+            <span id="score" class="text-2xl font-bold text-emerald-400">0</span>
+        </div>
+    </div>
+
+    <!-- Àrea Principal del Joc (Canvas) -->
+    <main class="relative w-full max-w-4xl flex items-center justify-center my-1">
+        <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[65vh] flex items-center justify-center">
+            <canvas id="gameCanvas" class="w-full h-full object-contain"></canvas>
+
+            <!-- Pantalla de Inici / Game Over / Victòria -->
+            <div id="overlay" class="absolute inset-0 bg-slate-950/85 backdrop-blur-md rounded-2xl flex flex-col items-center justify-center p-6 text-center z-20 transition-all duration-300">
+                <h2 id="overlay-title" class="text-3xl md:text-5xl font-black text-white mb-3">SNAKE NUMÈRIC</h2>
+                <p id="overlay-desc" class="text-sm md:text-base text-slate-300 max-w-md mb-6 leading-relaxed">
+                    Menja números de 4 xifres en ordre creixent. A dalt veuràs <b>quin va ser l'últim número que vas menjar</b> per saber quin toca a continuació.
+                </p>
+                <button id="start-btn" onclick="startGame()" class="control-btn px-8 py-4 rounded-xl text-lg font-bold text-white shadow-lg cursor-pointer">
+                    Començar 
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+    
+    <!-- Missatge flotant personalitzat -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-800 text-white px-5 py-3 rounded-xl shadow-2xl border border-slate-700 transform translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <span id="toast-icon">⚠️</span>
+        <span id="toast-msg" class="text-sm font-medium">Missatge d'avís</span>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Graella i dimensions
+        const GRID_SIZE = 20;
+        let tileWidth, tileHeight;
+
+        // Estat del joc
+        let snake = [];
+        let direction = 'RIGHT';
+        let nextDirection = 'RIGHT';
+        let numbersOnBoard = [];
+        let currentTargetIndex = 0;
+        let sequence = [];
+        let lives = 4;
+        let score = 0;
+        let gameInterval = null;
+        let gameRunning = false;
+        let speed = 240; // Velocitat pausada i suau
+
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            tileWidth = canvas.width / GRID_SIZE;
+            tileHeight = canvas.height / GRID_SIZE;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function generateNumberSequence() {
+            let seq = [];
+            let current = Math.floor(Math.random() * 2000) + 1000;
+            for (let i = 0; i < 20; i++) {
+                seq.push(current);
+                let step = Math.floor(Math.random() * 650) + 150;
+                current += step;
+                if (current > 9500) current = 9500 - Math.floor(Math.random() * 500);
+            }
+            return seq;
+        }
+
+        function startGame() {
+            lives = 4;
+            score = 0;
+            currentTargetIndex = 0;
+            sequence = generateNumberSequence();
+            
+            snake = [
+                {x: 10, y: 10},
+                {x: 9, y: 10},
+                {x: 8, y: 10}
+            ];
+            direction = 'RIGHT';
+            nextDirection = 'RIGHT';
+            
+            spawnNumbers();
+            updateHUD();
+
+            document.getElementById('overlay').classList.add('opacity-0', 'pointer-events-none');
+            
+            if (gameInterval) clearInterval(gameInterval);
+            gameRunning = true;
+            gameInterval = setInterval(gameLoop, speed);
+        }
+
+        function spawnNumbers() {
+            numbersOnBoard = [];
+            let targetNum = sequence[currentTargetIndex];
+            let options = [targetNum];
+
+            if (currentTargetIndex > 0 && Math.random() > 0.5) {
+                options.push(sequence[currentTargetIndex - 1]);
+            } else if (currentTargetIndex + 1 < sequence.length) {
+                options.push(sequence[currentTargetIndex + 1]);
+            } else {
+                options.push(targetNum + Math.floor(Math.random() * 400) + 50);
+            }
+
+            while (options.length < 4) {
+                let randomDistractor = Math.floor(Math.random() * 8500) + 1000;
+                if (!options.includes(randomDistractor) && !sequence.includes(randomDistractor)) {
+                    options.push(randomDistractor);
+                }
+            }
+
+            options.sort(() => Math.random() - 0.5);
+
+            options.forEach(num => {
+                let pos = getFreeRandomPosition();
+                numbersOnBoard.push({
+                    value: num,
+                    x: pos.x,
+                    y: pos.y
+                });
+            });
+        }
+
+        function getFreeRandomPosition() {
+            let pos;
+            let collision;
+            do {
+                collision = false;
+                pos = {
+                    x: Math.floor(Math.random() * GRID_SIZE),
+                    y: Math.floor(Math.random() * GRID_SIZE)
+                };
+                for (let part of snake) {
+                    if (part.x === pos.x && part.y === pos.y) {
+                        collision = true;
+                        break;
+                    }
+                }
+                for (let n of numbersOnBoard) {
+                    if (n.x === pos.x && n.y === pos.y) {
+                        collision = true;
+                        break;
+                    }
+                }
+            } while (collision);
+            return pos;
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+        }
+
+        function update() {
+            direction = nextDirection;
+            
+            let head = {x: snake[0].x, y: snake[0].y};
+            if (direction === 'UP') head.y--;
+            if (direction === 'DOWN') head.y++;
+            if (direction === 'LEFT') head.x--;
+            if (direction === 'RIGHT') head.x++;
+
+            // TELEPORTACIÓ DE LES VORES (Sense parets)
+            if (head.x < 0) head.x = GRID_SIZE - 1;
+            if (head.x >= GRID_SIZE) head.x = 0;
+            if (head.y < 0) head.y = GRID_SIZE - 1;
+            if (head.y >= GRID_SIZE) head.y = 0;
+
+            // Comprovar col·lisió amb el propi cos
+            for (let i = 0; i < snake.length; i++) {
+                if (head.x === snake[i].x && head.y === snake[i].y) {
+                    loseLife("T'has mossegat a tu mateix!");
+                    return;
+                }
+            }
+
+            snake.unshift(head);
+
+            let eatenIndex = numbersOnBoard.findIndex(n => n.x === head.x && n.y === head.y);
+            if (eatenIndex !== -1) {
+                let eatenNumber = numbersOnBoard[eatenIndex].value;
+                let correctNumber = sequence[currentTargetIndex];
+
+                if (eatenNumber === correctNumber) {
+                    score += 100;
+                    currentTargetIndex++;
+                    showToast(`✅ Correcte! Has menjat el ${eatenNumber}`, 'success');
+
+                    if (currentTargetIndex >= sequence.length) {
+                        endGame(true);
+                        return;
+                    }
+
+                    spawnNumbers();
+                } else {
+                    snake.pop();
+                    let lastEatenVal = currentTargetIndex > 0 ? sequence[currentTargetIndex - 1] : "Cap";
+                    loseLife(`❌ Error! El número ${eatenNumber} no toca. L'últim correcte era el ${lastEatenVal}.`);
+                    return;
+                }
+            } else {
+                snake.pop();
+            }
+
+            updateHUD();
+        }
+
+        function loseLife(reason) {
+            lives--;
+            updateHUD();
+            showToast(reason, 'error');
+
+            if (lives <= 0) {
+                endGame(false);
+            } else {
+                snake = [
+                    {x: 10, y: 10},
+                    {x: 9, y: 10},
+                    {x: 8, y: 10}
+                ];
+                direction = 'RIGHT';
+                nextDirection = 'RIGHT';
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Graella de fons
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= GRID_SIZE; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * tileWidth, 0);
+                ctx.lineTo(i * tileWidth, canvas.height);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(0, i * tileHeight);
+                ctx.lineTo(canvas.width, i * tileHeight);
+                ctx.stroke();
+            }
+
+            // Dibuixar números
+            numbersOnBoard.forEach(n => {
+                ctx.save();
+                let x = n.x * tileWidth;
+                let y = n.y * tileHeight;
+
+                ctx.fillStyle = '#1e293b';
+                ctx.strokeStyle = '#6366f1';
+                ctx.lineWidth = 2;
+                
+                roundedRect(ctx, x + 2, y + 2, tileWidth - 4, tileHeight - 4, 6);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = `bold ${Math.floor(tileWidth * 0.42)}px Poppins, sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(n.value, x + tileWidth / 2, y + tileHeight / 2);
+                ctx.restore();
+            });
+
+            // Dibuixar serp
+            snake.forEach((part, index) => {
+                ctx.save();
+                let x = part.x * tileWidth;
+                let y = part.y * tileHeight;
+
+                if (index === 0) {
+                    ctx.fillStyle = '#818cf8';
+                    roundedRect(ctx, x + 1, y + 1, tileWidth - 2, tileHeight - 2, 8);
+                    ctx.fill();
+
+                    ctx.fillStyle = '#0f172a';
+                    let eyeSize = tileWidth * 0.15;
+                    ctx.beginPath();
+                    ctx.arc(x + tileWidth * 0.5, y + tileHeight * 0.5, eyeSize, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    ctx.fillStyle = index % 2 === 0 ? '#4f46e5' : '#6366f1';
+                    roundedRect(ctx, x + 2, y + 2, tileWidth - 4, tileHeight - 4, 6);
+                    ctx.fill();
+                }
+                ctx.restore();
+            });
+        }
+
+        function roundedRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+
+        function updateHUD() {
+            let hearts = '';
+            for (let i = 0; i < 4; i++) {
+                hearts += i < lives ? '❤️ ' : '🖤 ';
+            }
+            document.getElementById('lives-container').innerText = hearts.trim();
+
+            let lastEatenEl = document.getElementById('last-eaten');
+            if (currentTargetIndex > 0) {
+                lastEatenEl.innerText = sequence[currentTargetIndex - 1];
+            } else {
+                lastEatenEl.innerText = 'Cap';
+            }
+
+            document.getElementById('score').innerText = score;
+        }
+
+        function changeDirection(newDir) {
+            if (!gameRunning) return;
+            if (newDir === 'UP' && direction !== 'DOWN') nextDirection = 'UP';
+            if (newDir === 'DOWN' && direction !== 'UP') nextDirection = 'DOWN';
+            if (newDir === 'LEFT' && direction !== 'RIGHT') nextDirection = 'LEFT';
+            if (newDir === 'RIGHT' && direction !== 'LEFT') nextDirection = 'RIGHT';
+        }
+
+        function handleTouchDir(dir) {
+            changeDirection(dir);
+        }
+
+        window.addEventListener('keydown', e => {
+            switch(e.key) {
+                case 'ArrowUp':
+                case 'w':
+                case 'W':
+                    changeDirection('UP');
+                    e.preventDefault();
+                    break;
+                case 'ArrowDown':
+                case 's':
+                case 'S':
+                    changeDirection('DOWN');
+                    e.preventDefault();
+                    break;
+                case 'ArrowLeft':
+                case 'a':
+                case 'A':
+                    changeDirection('LEFT');
+                    e.preventDefault();
+                    break;
+                case 'ArrowRight':
+                case 'd':
+                case 'D':
+                    changeDirection('RIGHT');
+                    e.preventDefault();
+                    break;
+            }
+        });
+
+        function endGame(won) {
+            gameRunning = false;
+            clearInterval(gameInterval);
+
+            const overlay = document.getElementById('overlay');
+            const title = document.getElementById('overlay-title');
+            const desc = document.getElementById('overlay-desc');
+            const btn = document.getElementById('start-btn');
+
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+
+            if (won) {
+                title.innerText = '🎉 ENHORABONA! VICTÒRIA!';
+                desc.innerHTML = `Has completat tota la seqüència numèrica correctament!<br><b>Puntuació final: ${score} punts</b>`;
+                btn.innerText = 'Tornar a jugar';
+            } else {
+                title.innerText = '💀 GAME OVER';
+                desc.innerHTML = `T'has quedat sense vides.<br>Has aconseguit <b>${score} punts</b> ordenant els números.`;
+                btn.innerText = 'Reintentar Partida';
+            }
+        }
+
+        let toastTimeout;
+        function showToast(msg, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            const toastIcon = document.getElementById('toast-icon');
+
+            toastMsg.innerText = msg;
+            toastIcon.innerText = type === 'success' ? '🎯' : '⚠️';
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 2500);
+        }
+
+        draw();
+    </script>
+
+</body>
+</html>
