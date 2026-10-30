@@ -1,0 +1,30 @@
+{
+  "title": "nombresromans",
+  "date": "30/09/26",
+  "description": {},
+  "license": {
+    "ca": "Aquesta obra està sota una llicència de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "ca"
+  ],
+  "mainFile": "nombresromans.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 9,
+  "mediaFiles": 6,
+  "totalSize": 123389,
+  "files": [
+    "favicon.ico",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "nombres_romans_portada-resized.jpg",
+    "nombresromans.jclic",
+    "nombresromans.jclic.js",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json"
+  ]
+}

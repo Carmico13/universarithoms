@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="nombresromans" version="0.1.3">
+ <settings>
+  <title>nombresromans</title>
+  <revision description="created" date="9/30/26" />
+  <descriptors />
+  <meta_langs>ca</meta_langs>
+  <descriptions>
+   <description language="ca" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="PORTADA" />
+  <item id="Recordatori" name="RECORDATORI" />
+  <item name="RELACIONA" />
+  <item name="RELACIONA_2" />
+  <item name="RELACIONA_3" />
+  <item name="QUIN NÚMERO ÉS?" />
+  <item name="BUSCA PARELLES" />
+  <item name="BUSCA PARELLES_2" />
+  <item name="RELACIONA_4" />
+ </sequence>
+ <activities>
+  <activity class="@memory.MemoryGame" name="BUSCA PARELLES" code="">
+   <description>
+    <p>Resoldre el tauler emparellant totes les fitxes de números romans amb les de números decimals mitjançant mecàniques de memòria clàssica.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Troba les parelles.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>12</p>
+    </cell>
+    <cell>
+     <p>15</p>
+    </cell>
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell>
+     <p>24</p>
+    </cell>
+    <cell>
+     <p>17</p>
+    </cell>
+    <cell>
+     <p>21</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>XII</p>
+    </cell>
+    <cell>
+     <p>XV</p>
+    </cell>
+    <cell>
+     <p>XXIX</p>
+    </cell>
+    <cell>
+     <p>XXIV</p>
+    </cell>
+    <cell>
+     <p>XVII</p>
+    </cell>
+    <cell>
+     <p>XXI</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@memory.MemoryGame" name="BUSCA PARELLES_2" code="">
+   <description>
+    <p>Resoldre el tauler emparellant totes les fitxes de números romans amb les de números decimals mitjançant mecàniques de memòria clàssica.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Troba les parelles.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>123</p>
+    </cell>
+    <cell>
+     <p>255</p>
+    </cell>
+    <cell>
+     <p>315</p>
+    </cell>
+    <cell>
+     <p>273</p>
+    </cell>
+    <cell>
+     <p>176</p>
+    </cell>
+    <cell>
+     <p>219</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="50.0" cellHeight="30.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>CXXIII</p>
+    </cell>
+    <cell>
+     <p>CCLV</p>
+    </cell>
+    <cell>
+     <p>CCCXV</p>
+    </cell>
+    <cell>
+     <p>CCLXXIII</p>
+    </cell>
+    <cell>
+     <p>CLXXVI</p>
+    </cell>
+    <cell>
+     <p>CCXVI</p>
+    </cell>
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="PORTADA" code="">
+   <description />
+   <messages />
+   <settings margin="8" report="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" cellWidth="745.0" cellHeight="425.0" border="true">
+    <style borderStroke="0.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="1" />
+    <cell image="nombres romans Portada-resized.jpg" />
+   </cells>
+  </activity>
+  <activity class="@text.WrittenAnswer" name="QUIN NÚMERO ÉS?" code="">
+   <description>
+    <p>Escriure el número romà que equival al número decimal que apareix e en un requadre de text.&#xD;</p>
+    <p>&#xD;</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Escriu quin número romà és.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <p>Enhorabona!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell id="0">
+     <p>77</p>
+    </cell>
+    <cell id="1">
+     <p>43</p>
+    </cell>
+    <cell id="2">
+     <p>64</p>
+    </cell>
+    <cell id="3">
+     <p>88</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="answers">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>LXXVII</p>
+    </cell>
+    <cell>
+     <p>XLIII</p>
+    </cell>
+    <cell>
+     <p>LXIV</p>
+    </cell>
+    <cell>
+     <p>LXXXVIII</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RECORDATORI" code="">
+   <description>
+    <p>Relacionar els números romans amb els números decimals del mateix valor, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona els números romans amb els números decimals.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="7" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>I</p>
+    </cell>
+    <cell>
+     <p>V</p>
+    </cell>
+    <cell>
+     <p>X</p>
+    </cell>
+    <cell>
+     <p>L</p>
+    </cell>
+    <cell>
+     <p>C</p>
+    </cell>
+    <cell>
+     <p>D</p>
+    </cell>
+    <cell>
+     <p>M</p>
+    </cell>
+   </cells>
+   <cells rows="7" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="7" />
+    <cell>
+     <p>1</p>
+    </cell>
+    <cell>
+     <p>5</p>
+    </cell>
+    <cell>
+     <p>10</p>
+    </cell>
+    <cell>
+     <p>50</p>
+    </cell>
+    <cell>
+     <p>100</p>
+    </cell>
+    <cell>
+     <p>500</p>
+    </cell>
+    <cell>
+     <p>1.000</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA" code="">
+   <description>
+    <p>Relacionar els números romans amb els números decimals del mateix valor, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona el nombre romà amb el decimal.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="99.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>XIV</p>
+    </cell>
+    <cell>
+     <p>XXIII</p>
+    </cell>
+    <cell>
+     <p>XXIX</p>
+    </cell>
+    <cell>
+     <p>XVI</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>14</p>
+    </cell>
+    <cell>
+     <p>23</p>
+    </cell>
+    <cell>
+     <p>29</p>
+    </cell>
+    <cell>
+     <p>16</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA_2" code="">
+   <description>
+    <p>Relacionar els números romans amb els números decimals del mateix valor, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona el nombre romà amb el decimal.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="99.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>XXVII</p>
+    </cell>
+    <cell>
+     <p>LV</p>
+    </cell>
+    <cell>
+     <p>LXIV</p>
+    </cell>
+    <cell>
+     <p>XXXVIII</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>27</p>
+    </cell>
+    <cell>
+     <p>55</p>
+    </cell>
+    <cell>
+     <p>64</p>
+    </cell>
+    <cell>
+     <p>38</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA_3" code="">
+   <description>
+    <p>Relacionar els números romans amb els números decimals del mateix valor, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona el nombre romà amb el decimal.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="99.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>CCCLV</p>
+    </cell>
+    <cell>
+     <p>DCLXI</p>
+    </cell>
+    <cell>
+     <p>CDV</p>
+    </cell>
+    <cell>
+     <p>CXXIV</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>355</p>
+    </cell>
+    <cell>
+     <p>661</p>
+    </cell>
+    <cell>
+     <p>405</p>
+    </cell>
+    <cell>
+     <p>124</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="RELACIONA_4" code="">
+   <description>
+    <p>Relacionar els números romans amb els números decimals del mateix valor, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="18" />
+      <color background="0xEDF7F7" />
+     </style>
+     <p>Relaciona el nombre romà amb el decimal.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xEDEDF7" />
+     </style>
+     <p>Felicitats!</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xF7F2ED">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="99.0" border="true" id="primary">
+    <style borderStroke="2.0" markerStroke="5.0">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>DCCCLXI</p>
+    </cell>
+    <cell>
+     <p>CDLV</p>
+    </cell>
+    <cell>
+     <p>CCXXXV</p>
+    </cell>
+    <cell>
+     <p>CLXXII</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="300.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="2.2" markerStroke="2.7">
+     <font family="Arial" size="48" />
+     <color background="0xDFCCB8" inactive="0xEDF2F7" border="0xC8A583" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <p>861</p>
+    </cell>
+    <cell border="true">
+     <p>455</p>
+    </cell>
+    <cell>
+     <p>235</p>
+    </cell>
+    <cell>
+     <p>172</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="nombres romans Portada-resized.jpg" file="nombres_romans_portada-resized.jpg" />
+ </mediaBag>
+</JClicProject>
+
