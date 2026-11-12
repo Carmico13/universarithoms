@@ -109,7 +109,7 @@
     </style>
     <shaper class="@Rectangular" cols="3" rows="3" />
     <cell>
-     <p>1859</p>
+     <p>1.859</p>
     </cell>
     <cell>
      <p>12</p>
@@ -121,7 +121,7 @@
      <p>739</p>
     </cell>
     <cell>
-     <p>3658</p>
+     <p>3.658</p>
     </cell>
     <cell>
      <p>49</p>
@@ -133,7 +133,7 @@
      <p>654</p>
     </cell>
     <cell>
-     <p>4632</p>
+     <p>4.632</p>
     </cell>
    </cells>
    <scramble times="31" />
@@ -172,7 +172,7 @@
     </style>
     <shaper class="@Rectangular" cols="3" rows="3" />
     <cell>
-     <p>6352</p>
+     <p>6.352</p>
     </cell>
     <cell>
      <p>34</p>
@@ -184,7 +184,7 @@
      <p>326</p>
     </cell>
     <cell>
-     <p>8426</p>
+     <p>8.426</p>
     </cell>
     <cell>
      <p>30</p>
@@ -196,7 +196,7 @@
      <p>731</p>
     </cell>
     <cell>
-     <p>1862</p>
+     <p>1.862</p>
     </cell>
    </cells>
    <scramble times="31" />
@@ -1677,7 +1677,7 @@
     <cell id="2">
      <p>63 - 35</p>
     </cell>
-    <cell id="2">
+    <cell id="3">
      <p>85 - 47</p>
     </cell>
    </cells>
@@ -1918,7 +1918,7 @@
       <font family="Arial" size="18" />
       <color background="0xEDF7F7" />
      </style>
-     <p>Troba tots els números amagats. 100, 200, 500, 600, 800 i 900.</p>
+     <p>Troba tots els números amagats. 100, 200, 500, 600, 700, 800 i 900.</p>
     </cell>
     <cell type="final">
      <style borderStroke="0.7" markerStroke="2.7">
@@ -1971,7 +1971,7 @@
     </style>
     <shaper class="@Rectangular" cols="1" rows="1" />
     <cell>
-     <p>100, 200, 500, 600, 800 i 900</p>
+     <p>100, 200, 500, 600, 700, 800 i 900</p>
     </cell>
    </cells>
    <layout position="AUB" />
@@ -2309,7 +2309,7 @@
     <cell id="2">
      <p>51 + 34</p>
     </cell>
-    <cell id="2">
+    <cell id="3">
      <p>75 + 14</p>
     </cell>
    </cells>
