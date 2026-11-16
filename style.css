@@ -306,3 +306,21 @@ h1 {
   max-width: 320px;    /* Mida màxima desitjada */
   margin: 0 auto;      /* Centrada */
 }
+
+/* 1. Evita que els marges i paddings sumin amplada extra a les caixes */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Evita que la pàgina es desplaci horitzontalment */
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Fes que qualsevol element o imatge respecti l'amplada màxima de la pantalla */
+img, video, div, section {
+  max-width: 100%;
+}
