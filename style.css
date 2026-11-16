@@ -273,3 +273,8 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+h1 {
+  /* El text s'adapta automàticament entre 1.5rem i 2.5rem segons la pantalla */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
