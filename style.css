@@ -289,8 +289,10 @@
 }
 
 /* 3. Fes que el títol s'encongeixi al mòbil */
-h1, p {
-  /* Evita que les paraules llargues surtin del contenidor o es tallin malament */
+h1 {
+  /* Mínim 1.8rem al mòbil, màxim 3.5rem a l'ordinador */
+  font-size: clamp(1.8rem, 7vw, 3.5rem); 
+    /* Evita que les paraules llargues surtin del contenidor o es tallin malament */
   overflow-wrap: break-word;
   word-wrap: break-word;
   
