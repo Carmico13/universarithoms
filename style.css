@@ -274,7 +274,30 @@
   margin-bottom: 10px;
 }
 
+
+/* 1. Evita que el padding faci créixer les caixes més del compte */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Adapta el contenidor principal (la fulla beige) */
+.el-teu-contenidor-principal {
+  width: 92%;          /* Que ocupi gairebé tot l'ample al mòbil */
+  max-width: 900px;    /* Però que no creixi massa a l'ordinador */
+  margin: 15px auto;   /* Centrat i amb poc marge superior */
+  padding: 20px 15px;  /* Menys espai interior als costats */
+}
+
+/* 3. Fes que el títol s'encongeixi al mòbil */
 h1 {
-  /* El text s'adapta automàticament entre 1.5rem i 2.5rem segons la pantalla */
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  /* Mínim 1.8rem al mòbil, màxim 3.5rem a l'ordinador */
+  font-size: clamp(1.8rem, 7vw, 3.5rem); 
+  word-wrap: break-word; /* Evita que una paraula llarga surti de la pantalla */
+}
+
+/* 4. Fes que les targetes (com la d'ARITHMÓS 1) no es tallin */
+.la-teva-targeta {
+  width: 100%;         /* Que s'adapti al contenidor pare */
+  max-width: 320px;    /* Mida màxima desitjada */
+  margin: 0 auto;      /* Centrada */
 }
