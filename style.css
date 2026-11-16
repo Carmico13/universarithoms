@@ -289,10 +289,13 @@
 }
 
 /* 3. Fes que el títol s'encongeixi al mòbil */
-h1 {
-  /* Mínim 1.8rem al mòbil, màxim 3.5rem a l'ordinador */
-  font-size: clamp(1.8rem, 7vw, 3.5rem); 
-  word-wrap: break-word; /* Evita que una paraula llarga surti de la pantalla */
+h1, p {
+  /* Evita que les paraules llargues surtin del contenidor o es tallin malament */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  
+  /* Fa que el navegador divideixi les paraules amb guionets de manera natural */
+  hyphens: auto;
 }
 
 /* 4. Fes que les targetes (com la d'ARITHMÓS 1) no es tallin */
