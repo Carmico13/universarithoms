@@ -9,28 +9,51 @@
 <body>
     <div class="contenidor-joc">
         <h1>Identifica el bit</h1>
-        
-        <div id="capcalera-info">
-            <span id="progres">Pregunta 1 de 2</span>
-            <span id="temps">Temps: 25s</span> <!-- NOU: Element del temporitzador -->
-            <span id="puntuacio">Punts: 0</span>
-        </div>
 
-        <div id="zona-pregunta">
-            <h2 id="text-pregunta">Aquí anirà la pregunta...</h2>
-            <img id="imatge-pregunta" class="ocult" src="" alt="Imatge de la pregunta">
-            <div id="opcions-container" class="graella-opcions">
-                <!-- Els botons de les respostes s'afegiran des de JavaScript -->
-                <button class="btn-opcio">Opció 1</button>
-                <button class="btn-opcio">Opció 2</button>
-                <button class="btn-opcio">Opció 3</button>
-                <button class="btn-opcio">Opció 4</button>
+        <!-- PANTALLA 1: SELECCIÓ DE NIVELL -->
+        <div id="pantalla-inici">
+            <div class="camp-nom">
+                <label for="input-nom">Nom del jugador:</label>
+                <input type="text" id="input-nom" placeholder="Ex: Carla" maxlength="20">
+            </div>
+   
+            <p class="subtitol-inici">Tria el nivell per començar la ronda de 10 preguntes:</p>
+            <div class="llista-nivells">
+                <button type="button" class="btn-nivell" data-nivell="nivell1">
+                    <strong>Nivell 1</strong>
+                    <span>Nombres inicials</span>
+                </button>
+                <button type="button" class="btn-nivell" data-nivell="nivell2">
+                    <strong>Nivell 2</strong>
+                    <span>De 5 en 5</span>
+                </button>
+                <button type="button" class="btn-nivell" data-nivell="nivell3">
+                    <strong>Nivell 3</strong>
+                    <span>De 3 en 3</span>
+                </button>
             </div>
         </div>
 
-        <button id="btn-seguent" class="ocult">Següent pregunta</button>
+        <!-- PANTALLA 2: EL JOC (oculta fins que es tria un nivell) -->
+        <div id="pantalla-joc" class="ocult">
+            <div id="capcalera-info">
+                <span id="progres">Pregunta 1 de 10</span>
+                <span id="temps">Temps: 25s</span>
+                <span id="puntuacio">Punts: 0</span>
+            </div>
+
+            <div id="zona-pregunta">
+                <h2 id="text-pregunta">Aquí anirà la pregunta...</h2>
+                <img id="imatge-pregunta" class="ocult" src="" alt="Imatge de la pregunta">
+                <div id="opcions-container" class="graella-opcions"></div>
+            </div>
+
+            <button id="btn-seguent" class="ocult">Següent pregunta</button>
+            <button id="btn-tornar-inici" class="btn-secundari ocult">Canviar de nivell</button>
+    
+        </div>
     </div>
 
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

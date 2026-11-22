@@ -123,3 +123,136 @@ h1 {
     color: #dc3545;
     font-weight: bold;
 }
+
+/* Estils de la pantalla d'inici */
+.subtitol-inici {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.llista-nivells {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn-nivell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 18px;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-nivell strong {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.btn-nivell span {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.btn-nivell:hover {
+    background-color: #e7f1ff;
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+.btn-secundari {
+    margin-top: 12px;
+    width: 100%;
+    padding: 13px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secundari:hover {
+    background-color: #dee2e6;
+}
+
+.camp-nom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.camp-nom label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.camp-nom input {
+    padding: 10px 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.camp-nom input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.podi-contenidor {
+    margin-top: 22px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.podi-contenidor h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.podi-llista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.podi-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    font-weight: bold;
+}
+
+.podi-item.pos-1 {
+    border-color: #ffd700;
+    background-color: #fffdf0;
+}
+
+.podi-item.pos-2 {
+    border-color: #c0c0c0;
+    background-color: #f9fafb;
+}
+
+.podi-item.pos-3 {
+    border-color: #cd7f32;
+    background-color: #fdf7f2;
+}

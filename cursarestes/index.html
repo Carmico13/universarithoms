@@ -326,7 +326,7 @@
             let num2 = Math.floor(Math.random() * 10) + 1;
             respostaCorrectaActual = num1 - num2;
 
-            textEnunciat.innerText = `Quant és ${num1} + ${num2}?`;
+            textEnunciat.innerText = `Quant és ${num1} - ${num2}?`;
             feedbackResposta.innerText = "";
             inputResposta.value = "";
             modalPregunta.style.display = "block";
@@ -383,7 +383,7 @@
             let nom = prompt(`Temps esgotat!\nHas aconseguit ${puntsObtinguts} punts.\nIntrodueix el teu nom:`) || "Jugador";
             let podi = [];
             try {
-                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi") || "[]");
+                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi_restes") || "[]");
             } catch (err) {
                 podi = [];
             }
@@ -393,7 +393,7 @@
             podi = podi.slice(0, 5);
 
             try {
-                localStorage.setItem("cursa_matematica_podi", JSON.stringify(podi));
+                localStorage.setItem("cursa_matematica_podi_restes", JSON.stringify(podi));
             } catch (e) {}
 
             actualitzarPodiVisual();
@@ -403,7 +403,7 @@
             const llista = document.getElementById("llista-podi");
             let podi = [];
             try {
-                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi") || "[]");
+                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi_restes") || "[]");
             } catch (err) {
                 podi = [];
             }
