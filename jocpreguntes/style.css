@@ -256,3 +256,55 @@ h1 {
     border-color: #cd7f32;
     background-color: #fdf7f2;
 }
+
+/* Ajustos generals per a pantalles petites */
+body {
+    padding: 12px;
+}
+
+.contenidor-joc {
+    padding: clamp(16px, 4vw, 30px);
+}
+
+#capcalera-info {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+}
+
+/* En tauletes i mòbils grans: 2 columnes */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #text-pregunta {
+        font-size: 1.15rem;
+    }
+
+    .graella-opcions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .btn-opcio {
+        font-size: 2rem;
+        min-height: 64px;
+    }
+
+    #imatge-pregunta {
+        max-height: 220px;
+    }
+}
+
+/* En mòbils molt estrets: 1 columna si cal */
+@media (max-width: 360px) {
+    .graella-opcions {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-opcio {
+        aspect-ratio: auto;
+        min-height: 54px;
+        font-size: 1.6rem;
+    }
+}
