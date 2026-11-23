@@ -20,19 +20,21 @@
   "levels": {
     "ca": "Primària (6-12)"
   },
-  "description": {},
+  "description": {
+    "ca": ""
+  },
   "license": {
     "ca": "Aquesta obra està sota una llicència de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
   },
   "meta_langs": [
     "ca"
   ],
+  "cover": "connectabits-resized.jpg",
+  "thumbnail": "connectabits-resized.jpg",
   "mainFile": "bits_1-24.jclic",
-  "cover": "project-cover.jpg",
-  "thumbnail": "project-thumb.jpg",
   "activities": 31,
-  "mediaFiles": 30,
-  "totalSize": 592049,
+  "mediaFiles": 26,
+  "totalSize": 568275,
   "files": [
     "bits_1-24.jclic",
     "bits_1-24.jclic.js",
@@ -60,14 +62,10 @@
     "bits_1-24_page-0022-resized.jpg",
     "bits_1-24_page-0023-resized.jpg",
     "bits_1-24_page-0024-resized.jpg",
+    "connectabits-resized.jpg",
     "connectabits_portada-resized.jpg",
-    "favicon.ico",
-    "icon-192.png",
-    "icon-72.png",
     "imsmanifest.xml",
     "index.html",
-    "project-cover.jpg",
-    "project-thumb.jpg",
     "project.json"
   ]
 }

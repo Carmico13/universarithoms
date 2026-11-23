@@ -5,7 +5,11 @@
   <revision description="created" date="7/29/26" />
   <author name="Carla Garcia Carranzo" />
   <descriptors area-codes="mat" level-codes="PRI" />
-  <cover file="Arithmos 1 Portada-resized.jpg" />
+  <cover file="ArithmósI-resized.jpg" />
+  <thumb file="ArithmósI-resized.jpg" />
+  <icon16 file="ArithmósI-resized.jpg" />
+  <icon72 file="ArithmósI-resized.jpg" />
+  <icon192 file="ArithmósI-resized.jpg" />
   <meta_langs>ca</meta_langs>
   <descriptions>
    <description language="ca" />
@@ -3108,6 +3112,7 @@
  </activities>
  <mediaBag>
   <media name="Arithmos 1 Portada-resized.jpg" file="arithmos_1_portada-resized.jpg" />
+  <media name="ArithmósI-resized.jpg" file="arithmosi-resized.jpg" />
   <media name="Trencaclosques 1-resized.jpg" file="trencaclosques_1-resized.jpg" />
   <media name="Trencaclosques 2-resized.jpg" file="trencaclosques_2-resized.jpg" />
   <media name="Trencaclosques 3-resized.jpg" file="trencaclosques_3-resized.jpg" />

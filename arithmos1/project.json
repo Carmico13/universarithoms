@@ -14,29 +14,28 @@
   "levels": {
     "ca": "Primària (6-12)"
   },
-  "description": {},
+  "description": {
+    "ca": ""
+  },
   "license": {
     "ca": "Aquesta obra està sota una llicència de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
   },
   "meta_langs": [
     "ca"
   ],
-  "cover": "arithmos_1_portada-resized.jpg",
+  "cover": "arithmosi-resized.jpg",
+  "thumbnail": "arithmosi-resized.jpg",
   "mainFile": "joc_descomposicio.jclic",
-  "thumbnail": "project-thumb.jpg",
   "activities": 51,
-  "mediaFiles": 11,
-  "totalSize": 730286,
+  "mediaFiles": 8,
+  "totalSize": 743203,
   "files": [
     "arithmos_1_portada-resized.jpg",
-    "favicon.ico",
-    "icon-192.png",
-    "icon-72.png",
+    "arithmosi-resized.jpg",
     "imsmanifest.xml",
     "index.html",
     "joc_descomposicio.jclic",
     "joc_descomposicio.jclic.js",
-    "project-thumb.jpg",
     "project.json",
     "trencaclosques_1-resized.jpg",
     "trencaclosques_2-resized.jpg",

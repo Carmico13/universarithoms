@@ -6,6 +6,11 @@
   <author name="Carla García Carranzo" mail="carlacarranzo@hotmail.com" />
   <language>ca</language>
   <descriptors area-codes="mat" level-codes="PRI" />
+  <cover file="connectabits-resized.jpg" />
+  <thumb file="connectabits-resized.jpg" />
+  <icon16 file="connectabits-resized.jpg" />
+  <icon72 file="connectabits-resized.jpg" />
+  <icon192 file="connectabits-resized.jpg" />
   <meta_langs>ca</meta_langs>
   <descriptions>
    <description language="ca" />
@@ -1144,7 +1149,9 @@
    <layout position="AB" />
   </activity>
   <activity class="@associations.SimpleAssociation" name="RELACIONA BITS" code="">
-   <description />
+   <description>
+    <p>Relacionar els bits amb el número corresponen, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
    <messages>
     <cell type="initial">
      <style>
@@ -1207,7 +1214,9 @@
    <layout position="AUB" />
   </activity>
   <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_2" code="">
-   <description />
+   <description>
+    <p>Relacionar els bits amb el número corresponen, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
    <messages>
     <cell type="initial">
      <style>
@@ -1270,7 +1279,9 @@
    <layout position="AUB" />
   </activity>
   <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_3" code="">
-   <description />
+   <description>
+    <p>Relacionar els bits amb el número corresponen, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
    <messages>
     <cell type="initial">
      <style>
@@ -1317,7 +1328,7 @@
      <p>5</p>
     </cell>
     <cell>
-     <p>12</p>
+     <p>8</p>
     </cell>
     <cell>
      <p>11</p>
@@ -1333,7 +1344,9 @@
    <layout position="AUB" />
   </activity>
   <activity class="@associations.SimpleAssociation" name="RELACIONA BITS_4" code="">
-   <description />
+   <description>
+    <p>Relacionar els bits amb el número corresponen, per fer cal connectar cada element del Plafó A amb un únic element del Plafó B.</p>
+   </description>
    <messages>
     <cell type="initial">
      <style>
@@ -1544,6 +1557,7 @@
   <media name="BITS 1-24_page-0023-resized.jpg" file="bits_1-24_page-0023-resized.jpg" />
   <media name="BITS 1-24_page-0024-resized.jpg" file="bits_1-24_page-0024-resized.jpg" />
   <media name="connectabits Portada-resized.jpg" file="connectabits_portada-resized.jpg" />
+  <media name="connectabits-resized.jpg" file="connectabits-resized.jpg" />
  </mediaBag>
 </JClicProject>
 
