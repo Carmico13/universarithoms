@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursa Matemàtica Contrarrellotge</title>
+    <link rel="icon" type="image/png" href="cursarestes.png" />
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            background-color: #d8c4b6;
+            color: #3e3228;
+            margin: 0;
+            padding: 20px;
+        }
+        #ui {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #3e3228;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #temps { color: #d63031; }
+        #punts { color: #00b894; }
+
+        .panell {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f4eee0;
+            padding: 30px;
+            border-radius: 12px;
+            border: 3px solid #b59f8c;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            width: 90%;
+            max-width: 520px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        button {
+            padding: 12px 22px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #b59f8c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+            margin: 5px;
+        }
+        button:hover { background-color: #9c8473; }
+        button.secundari { background-color: #7f8c8d; }
+        button.secundari:hover { background-color: #636e72; }
+
+        canvas {
+            background-color: #fcf9f2;
+            display: block;
+            margin: 0 auto;
+            border: 4px solid #b59f8c;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Selector de personatges */
+        .personatges-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .targeta-personatge {
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            padding: 12px;
+            cursor: pointer;
+            width: 110px;
+            transition: all 0.2s;
+            background: #fff;
+        }
+        .targeta-personatge.seleccionat {
+            border-color: #00b894;
+            background-color: #e8f8f5;
+            transform: scale(1.05);
+        }
+        .icona-personatge {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 8px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Anunci emergent gran (Modal de preguntes) */
+        #modal-pregunta {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            border: 5px solid #f39c12;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            width: 90%;
+            max-width: 620px;
+            display: none;
+            z-index: 20;
+            box-sizing: border-box;
+        }
+        #modal-pregunta h2 {
+            font-size: 30px;
+            margin-top: 0;
+            color: #d35400;
+        }
+        #text-enunciat {
+            font-size: 28px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        #input-resposta {
+            font-size: 24px;
+            padding: 10px;
+            width: 140px;
+            text-align: center;
+            border: 2px solid #b59f8c;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Podi */
+        ol.llista-podi {
+            text-align: left;
+            margin: 10px auto;
+            padding-left: 30px;
+            max-width: 280px;
+            font-size: 16px;
+        }
+        ol.llista-podi li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <div id="ui">
+        <div>Temps: <span id="temps">30</span>s</div>
+        <div>Punts: <span id="punts">0</span></div>
+        <button id="boto-pausa" onclick="obrirPausa()" style="display: none; padding: 6px 14px; font-size: 14px;">⏸ Pausa</button>
+    </div>
+
+    <!-- Menú d'inici -->
+    <div id="pantalla-inicio" class="panell">
+        <h1>Cursa Matemàtica</h1>
+        <p>Mou-te amb les fletxes, agafa la bola daurada i respon les restes per sumar temps.</p>
+
+        <h3>Tria el teu personatge:</h3>
+        <div class="personatges-grid">
+            <div id="opcio-p1" class="targeta-personatge seleccionat" onclick="seleccionarPersonatge('celila')">
+                <div class="icona-personatge" style="background: #ff7675;">C</div>
+                <strong>Celila</strong>
+            </div>
+            <div id="opcio-p2" class="targeta-personatge" onclick="seleccionarPersonatge('leo')">
+                <div class="icona-personatge" style="background: #0984e3;">L</div>
+                <strong>Leo</strong>
+            </div>
+        </div>
+
+        <button onclick="empezarJuego()">Iniciar la cursa!</button>
+
+        <div id="seccio-podi" style="margin-top: 15px;">
+            <h3>🏆 Podi de Campions</h3>
+            <ol id="llista-podi" class="llista-podi"></ol>
+        </div>
+    </div>
+
+    <!-- Menú de pausa -->
+    <div id="menu-pausa" class="panell" style="display: none;">
+        <h2>Joc Pausat</h2>
+        <p>Vols descansar una mica?</p>
+        <button onclick="reprendreJoc()">Reprendre joc</button>
+        <button class="secundari" onclick="aturarJoc()">Aturar i sortir al menú</button>
+    </div>
+
+    <!-- Modal Gran de Pregunta -->
+    <div id="modal-pregunta">
+        <h2>🔎 Investigació Matemàtica</h2>
+        <div id="text-enunciat">Quant és 5 + 5?</div>
+        <input type="number" id="input-resposta" placeholder="?" onkeydown="comprovarTeclaEnter(event)">
+        <br>
+        <button onclick="enviarResposta()">Confirmar Resposta</button>
+        <div id="feedback-resposta" style="font-weight: bold; font-size: 20px; margin-top: 15px;"></div>
+    </div>
+
+    <canvas id="lienzoJuego" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById("lienzoJuego");
+        const ctx = canvas.getContext("2d");
+
+        const txtTiempo = document.getElementById("temps");
+        const txtPuntos = document.getElementById("punts");
+        const pantallaInicio = document.getElementById("pantalla-inicio");
+        const menuPausa = document.getElementById("menu-pausa");
+        const botoPausa = document.getElementById("boto-pausa");
+        const modalPregunta = document.getElementById("modal-pregunta");
+        const textEnunciat = document.getElementById("text-enunciat");
+        const inputResposta = document.getElementById("input-resposta");
+        const feedbackResposta = document.getElementById("feedback-resposta");
+
+        let jugador = { x: 50, y: 250, velocidad: 5, tamano: 40 };
+        let meta = { x: 600, y: 300, tamano: 15 };
+        let tiempoRestante = 30;
+        let puntos = 0;
+        let juegoActivo = false;
+        let enPausa = false;
+        let preguntaActiva = false;
+        let animacioId = null;
+        let intervaloTiempo = null;
+        let teclas = {};
+        let respostaCorrectaActual = 0;
+        let personatgeSeleccionat = "celila";
+
+        let imgCelila = new Image();
+        let imatgeCarregada = false;
+        imgCelila.onload = function() { imatgeCarregada = true; };
+        imgCelila.src = "celila.png";
+
+        let imgLeo = new Image();
+        let imatgeLeoCarregada = false;
+        imgLeo.onload = function() { imatgeLeoCarregada = true; };
+        imgLeo.src = "leo.png";
+
+        window.addEventListener("keydown", function(e) { teclas[e.key] = true; });
+        window.addEventListener("keyup", function(e) { teclas[e.key] = false; });
+
+        function seleccionarPersonatge(tipus) {
+            personatgeSeleccionat = tipus;
+            document.getElementById("opcio-p1").classList.toggle("seleccionat", tipus === "celila");
+            document.getElementById("opcio-p2").classList.toggle("seleccionat", tipus === "leo");
+        }
+
+        function empezarJuego() {
+            if (animacioId) cancelAnimationFrame(animacioId);
+            clearInterval(intervaloTiempo);
+
+            pantallaInicio.style.display = "none";
+            menuPausa.style.display = "none";
+            modalPregunta.style.display = "none";
+            botoPausa.style.display = "inline-block";
+
+            jugador.x = 50;
+            jugador.y = 250;
+            tiempoRestante = 30;
+            puntos = 0;
+            juegoActivo = true;
+            enPausa = false;
+            preguntaActiva = false;
+
+            txtPuntos.innerText = puntos;
+            txtTiempo.innerText = tiempoRestante;
+            generarMeta();
+
+            intervaloTiempo = setInterval(function() {
+                if (juegoActivo && !enPausa && !preguntaActiva) {
+                    tiempoRestante--;
+                    txtTiempo.innerText = tiempoRestante;
+
+                    if (tiempoRestante <= 0) {
+                        finalizarJuego();
+                    }
+                }
+            }, 1000);
+
+            bucleJuego();
+        }
+
+        function obrirPausa() {
+            if (!juegoActivo || preguntaActiva) return;
+            enPausa = true;
+            menuPausa.style.display = "block";
+        }
+
+        function reprendreJoc() {
+            enPausa = false;
+            menuPausa.style.display = "none";
+            bucleJuego();
+        }
+
+        function aturarJoc() {
+            juegoActivo = false;
+            enPausa = false;
+            clearInterval(intervaloTiempo);
+            if (animacioId) cancelAnimationFrame(animacioId);
+            menuPausa.style.display = "none";
+            botoPausa.style.display = "none";
+            pantallaInicio.style.display = "block";
+            actualitzarPodiVisual();
+        }
+
+        function generarMeta() {
+            meta.x = Math.random() * (canvas.width - 100) + 50;
+            meta.y = Math.random() * (canvas.height - 100) + 50;
+        }
+
+        function moverJugador() {
+            if (teclas["ArrowUp"] && jugador.y > 0) jugador.y -= jugador.velocidad;
+            if (teclas["ArrowDown"] && jugador.y < canvas.height - jugador.tamano) jugador.y += jugador.velocidad;
+            if (teclas["ArrowLeft"] && jugador.x > 0) jugador.x -= jugador.velocidad;
+            if (teclas["ArrowRight"] && jugador.x < canvas.width - jugador.tamano) jugador.x += jugador.velocidad;
+        }
+
+        function ferPreguntaMatematica() {
+            preguntaActiva = true;
+            teclas = {};
+
+            let num1 = Math.floor(Math.random() * 15) + 3;
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            respostaCorrectaActual = num1 - num2;
+
+            textEnunciat.innerText = `Quant és ${num1} - ${num2}?`;
+            feedbackResposta.innerText = "";
+            inputResposta.value = "";
+            modalPregunta.style.display = "block";
+            setTimeout(function() { inputResposta.focus(); }, 50);
+        }
+
+        function comprovarTeclaEnter(e) {
+            if (e.key === "Enter") enviarResposta();
+        }
+
+        function enviarResposta() {
+            const valorInput = inputResposta.value.trim();
+            if (valorInput === "") return;
+
+            const respostaNum = parseInt(valorInput);
+
+            if (respostaNum === respostaCorrectaActual) {
+                puntos++;
+                tiempoRestante += 5;
+                txtPuntos.innerText = puntos;
+                feedbackResposta.style.color = "#00b894";
+                feedbackResposta.innerText = "¡Correcte! +5 segons extra";
+            } else {
+                tiempoRestante = Math.max(0, tiempoRestante - 3);
+                feedbackResposta.style.color = "#d63031";
+                feedbackResposta.innerText = `¡Incorrecte! Era ${respostaCorrectaActual}. -3 segons`;
+            }
+
+            txtTiempo.innerText = tiempoRestante;
+
+            setTimeout(function() {
+                modalPregunta.style.display = "none";
+                preguntaActiva = false;
+                generarMeta();
+                if (tiempoRestante <= 0) {
+                    finalizarJuego();
+                } else {
+                    bucleJuego();
+                }
+            }, 800);
+        }
+
+        function verificarColision() {
+            let dx = jugador.x + jugador.tamano / 2 - meta.x;
+            let dy = jugador.y + jugador.tamano / 2 - meta.y;
+            let distancia = Math.sqrt(dx * dx + dy * dy);
+
+            if (distancia < jugador.tamano / 2 + meta.tamano) {
+                ferPreguntaMatematica();
+            }
+        }
+
+        function desarPuntuacio(puntsObtinguts) {
+            let nom = prompt(`Temps esgotat!\nHas aconseguit ${puntsObtinguts} punts.\nIntrodueix el teu nom:`) || "Jugador";
+            let podi = [];
+            try {
+                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi_restes") || "[]");
+            } catch (err) {
+                podi = [];
+            }
+
+            podi.push({ nom: nom.substring(0, 15), punts: puntsObtinguts });
+            podi.sort(function(a, b) { return b.punts - a.punts; });
+            podi = podi.slice(0, 5);
+
+            try {
+                localStorage.setItem("cursa_matematica_podi_restes", JSON.stringify(podi));
+            } catch (e) {}
+
+            actualitzarPodiVisual();
+        }
+
+        function actualitzarPodiVisual() {
+            const llista = document.getElementById("llista-podi");
+            let podi = [];
+            try {
+                podi = JSON.parse(localStorage.getItem("cursa_matematica_podi_restes") || "[]");
+            } catch (err) {
+                podi = [];
+            }
+            llista.innerHTML = "";
+
+            if (!podi || podi.length === 0) {
+                llista.innerHTML = "<p style='font-size:14px; color:#666;'>Cap puntuació encara.</p>";
+                return;
+            }
+
+            podi.forEach(function(entrada) {
+                const li = document.createElement("li");
+                li.innerText = `${entrada.nom}: ${entrada.punts} punts`;
+                llista.appendChild(li);
+            });
+        }
+
+        function finalizarJuego() {
+            juegoActivo = false;
+            clearInterval(intervaloTiempo);
+            if (animacioId) cancelAnimationFrame(animacioId);
+
+            botoPausa.style.display = "none";
+            modalPregunta.style.display = "none";
+
+            desarPuntuacio(puntos);
+            pantallaInicio.style.display = "block";
+        }
+
+        function dibuixarPersonatge() {
+            if (personatgeSeleccionat === "celila") {
+                if (imatgeCarregada && imgCelila.naturalWidth !== 0) {
+                    ctx.drawImage(imgCelila, jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+                } else {
+                    ctx.fillStyle = "#ff7675";
+                    ctx.fillRect(jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+                }
+            } else {
+                if (imatgeLeoCarregada && imgLeo.naturalWidth !== 0) {
+                    ctx.drawImage(imgLeo, jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+                } else {
+                    ctx.fillStyle = "#0984e3";
+                    ctx.fillRect(jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = "#74b9ff";
+                    ctx.strokeRect(jugador.x, jugador.y, jugador.tamano, jugador.tamano);
+                }
+            }
+        }
+
+        function bucleJuego() {
+            if (!juegoActivo || enPausa || preguntaActiva) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            moverJugador();
+            verificarColision();
+            dibuixarPersonatge();
+
+            ctx.beginPath();
+            ctx.arc(meta.x, meta.y, meta.tamano, 0, Math.PI * 2);
+            ctx.fillStyle = "#f39c12";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#d35400";
+            ctx.stroke();
+            ctx.closePath();
+
+            animacioId = requestAnimationFrame(bucleJuego);
+        }
+
+        actualitzarPodiVisual();
+    </script>
+</body>
+</html>
