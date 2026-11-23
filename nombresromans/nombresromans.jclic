@@ -3,7 +3,13 @@
  <settings>
   <title>nombresromans</title>
   <revision description="created" date="9/30/26" />
-  <descriptors />
+  <author name="Carla García Carranzo" />
+  <descriptors area-codes="mat" level-codes="PRI" />
+  <cover file="nombresromans-resized.jpg" />
+  <thumb file="nombresromans-resized.jpg" />
+  <icon16 file="nombresromans-resized.jpg" />
+  <icon72 file="nombresromans-resized.jpg" />
+  <icon192 file="nombresromans-resized.jpg" />
   <meta_langs>ca</meta_langs>
   <descriptions>
    <description language="ca" />
@@ -609,6 +615,7 @@
  </activities>
  <mediaBag>
   <media name="nombres romans Portada-resized.jpg" file="nombres_romans_portada-resized.jpg" />
+  <media name="nombresromans-resized.jpg" file="nombresromans-resized.jpg" />
  </mediaBag>
 </JClicProject>
 
